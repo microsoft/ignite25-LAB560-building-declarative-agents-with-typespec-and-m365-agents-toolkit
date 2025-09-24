@@ -96,7 +96,7 @@ op deleteRepair is global.RepairsAPI.deleteRepair;
 
 Next, you will enhance the reference cards or response cards using adaptive cards. Let’s take the listRepairs operation and add an adaptive card for the repair item. 
 
-- In the project folder, create a new folder called "cards" under the "appPackage" folder. Create a file `repair.json` in the cards folder and paste the code snippet as is from below to the file. 
+- In the project folder, create a new folder called "adaptiveCards" under the "appPackage" folder. Create a file `repair.json` in the cards folder and paste the code snippet as is from below to the file. 
 
 ```json
 {
@@ -153,7 +153,7 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```typespec
 
-  @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "cards/repair.json"}) 
+  @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
   
   ```
 
@@ -164,7 +164,7 @@ Continue to add card response for the `createRepair` operation to show what the 
 
 ```typespec
 
-   @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "cards/repair.json"}) 
+   @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
 
 ```
 
