@@ -72,7 +72,73 @@ And replace title and text as below.
 
 ```
 
-### Update the action for the agent
+### Get to know the repair API service
+
+You'll need to explore the Repairs API to understand its endpoints and payloads. This section let's you interact effectively with the API service using REST Client, an extension already installed for you. 
+Inside the root folder create a folder called "http". 
+Create a new file named "repairs-api.http" inside this folder.
+Copy paste below content into the file.
+
+```
+@base_url = https://repairshub.azurewebsites.net
+
+### Get all repair requests
+{{base_url}}/repairs
+
+### Get a specific repair request by ID
+{{base_url}}/repairs/1
+
+### Create a new repair request
+POST {{base_url}}/repairs
+Content-Type: application/json
+
+{
+  "description": "Repair broken screen",
+  "date": "2023-10-01T12:00:00Z",
+  "image": "https://example.com/image.png"
+}
+
+### Update an existing repair request
+PATCH {{base_url}}/repairs
+Content-Type: application/json  
+
+{
+  "id": 1,
+  "description": "Repair broken screen - updated",
+  "date": "2023-10-01T12:00:00Z",
+  "image": "https://example.com/image-updated.png"
+}
+
+
+### Delete a repair request by ID
+DELETE {{base_url}}/repairs/10
+Content-Type: application/json
+
+{
+  "id": 10
+}
+```
+
+To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
+Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
+
+> Note there is a small delay to process the request but the response should come back.
+
+#### 📊 Repairs API Overview
+
+**Base URL**: `https://repairshub.azurewebsites.net`
+
+| Operation | Method | Endpoint | Payload required | Purpose |
+|-----------|--------|----------|------------------|---------|
+| Get all repair requests | GET | /repairs | No | Retrieve all repair jobs |
+| Get repair by ID | GET | /repairs/{id} | No | Fetch a specific repair job |
+| Create a repair request | POST | /repairs | Yes | Submit a new repair job |
+| Update a repair request | PATCH | /repairs/{id} | Yes | Modify an existing repair job |
+| Delete a repair request | DELETE | /repairs/{id} | No | Remove a repair job by ID |
+
+
+
+### Define the action for the agent
 
 Next, you will define the action for your agent by opening the actions.tsp file. You’ll return to the `main.tsp` file later to complete the agent metadata with the action reference, but first, the action itself must be defined. For that open the file `actions.tsp`.
 
