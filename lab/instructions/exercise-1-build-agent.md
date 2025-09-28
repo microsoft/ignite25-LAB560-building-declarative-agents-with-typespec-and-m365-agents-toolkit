@@ -122,6 +122,9 @@ Content-Type: application/json
 To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
 Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
 
+<img width="1457" height="874" alt="httpfile" src="https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249" />
+
+
 > Note there is a small delay to process the request but the response should come back.
 
 #### 📊 Repairs API Overview
