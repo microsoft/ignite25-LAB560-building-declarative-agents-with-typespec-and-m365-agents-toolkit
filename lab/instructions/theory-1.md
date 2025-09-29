@@ -8,10 +8,10 @@ As you build more agents for Copilot, you’ll notice that the final output is a
 
 | File Type                          | Description                                                                                                                                                     | Required |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Microsoft 365 App Manifest        | A JSON file (`manifest.json`) that defines the standard Teams app manifest.                                                                                     | Yes      |
-| Declarative Agent Manifest        | A JSON file containing the agent's name, instructions, capabilities, conversation starters, and actions (if applicable).                                        | Yes      |
+| App manifest        | A JSON file (`manifest.json`) that defines the standard Teams app manifest.                                                                                     | Yes      |
+| Declarative agents manifest        | A JSON file containing the agent's name, instructions, capabilities, conversation starters, and actions (if applicable).                                        | Yes      |
 | Plugin Manifest       | A JSON file used to configure your action as an API plugin. Includes authentication, required fields, adaptive card responses, etc. Only needed if actions exist. | No       |
-| OpenAPI Spec            | A JSON or YAML file defining your API. Required only if your agent includes actions.                                                                            | No       |
+| App icons            | A color and outline icon for your declarative agent.                                                                            | Yes    |
 
 ## Capabilities of a Declarative Agent
 
@@ -26,6 +26,8 @@ You can enhance the agent's focus on context and data by not only adding instruc
 - **People knowledge** - enables you to build an agent to answer questions about individuals in an organization.
 - **Teams messages** - enables you to equip the agent to search through Teams channels, teams, meetings, 1:1 chats, and group chats.
 - **Dataverse knowledge** - enables you to add a Dataverse instance as a knowledge source.
+- **Scenario models** - enables you to add task-specific models.
+- **Meetings**- enables you to build an agent to search for information about meetings in the organization.
 
 
 

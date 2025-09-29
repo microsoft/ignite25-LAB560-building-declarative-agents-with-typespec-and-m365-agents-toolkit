@@ -10,10 +10,11 @@ End this lab by selecting the **End** button from the menu as shown below:
 # Next Steps
 
 Customise your agent's personality and instructions.
-Try different capabilities in your agent.
+Try different capabilities in your agent. Check out self paced labs at [Copilot Developer Camp](https://aka.ms/copilotdevcamp)
 
 # Resources
 
-- [Copilot Developer Camp](https://aka.ms/copilotdevcamp)
-- [TypeSpec syntax]( https://typespec.io/docs/getting-started/getting-started-rest/01-setup-basic-syntax/)
+- [TypeSpec overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-typespec)
+- [Declarative agents overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-declarative-agent)
 - [Complete repair agent sample](https://aka.ms/repair-agent)
+- [Copilot Developer Camp](https://aka.ms/copilotdevcamp)
