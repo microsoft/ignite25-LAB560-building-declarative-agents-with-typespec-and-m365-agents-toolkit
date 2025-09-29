@@ -218,17 +218,19 @@ Let's take the updated agent who is also now a repairs analyst to test.
 
 - Start by using the conversation starter 'Create repair'. Replace parts of the prompt to add a title, then send it to the chat to initiate the interaction. For e.g.
 
-    `Create a new repair titled "rear camera issue" and assign it to me.`
+    `Create a new repair titled "360 camera issue" and assign it to me.`
 
 - The confirmation dialog if you notice has more metadata that what you sent, thanks to the new instructions. 
 
-![new-confirmation](https://github.com/user-attachments/assets/56629979-b1e5-4a03-a413-0bb8bb438f00)
+<img width="1089" height="846" alt="confirm" src="https://github.com/user-attachments/assets/34532abb-923d-434b-ae8e-260554a0209e" />
+
  
  - Proceed to add the item by confirming the dialog.
 
  The agent responds is with created item shown in a rich adaptive card.
 
- ![create-repair-ac](https://github.com/user-attachments/assets/6da0a38f-5de3-485a-999e-c695389853f8)
+<img width="1113" height="860" alt="success" src="https://github.com/user-attachments/assets/0e598c98-1899-42da-ae7b-c5d7e0082d78" />
+
 
 
  - Next, recheck reference cards work. Send below prompt in the conversation
@@ -237,7 +239,8 @@ Let's take the updated agent who is also now a repairs analyst to test.
 
 The agent with the list with each referenced with an adaptive card.
 
-![list-repairs](https://github.com/user-attachments/assets/880ad3aa-2ed3-4051-a68b-d988527d9d53)
+<img width="1110" height="640" alt="myissues" src="https://github.com/user-attachments/assets/6bb24a6c-e567-4961-83af-66cc6d899a1d" />
+
 
 
 - Next, you will test the new analytical capability of your agent. Open a new chat by selecting the **New chat** button on the top right corner of your agent.
@@ -247,7 +250,7 @@ The agent with the list with each referenced with an adaptive card.
 
 You should get some response similar to below screen. It may vary sometimes. 
 
-![final-chart](https://github.com/user-attachments/assets/ea1a5b21-bc57-4ed8-a8a4-c187caff2c64)
+<img width="1119" height="858" alt="chart" src="https://github.com/user-attachments/assets/8ccc7758-28ec-42ff-96fd-2341cad6c9ed" />
 
 
 ☑️ You've successfully completed the second exercise! Select **Next >** to go a bonus exercise. 
