@@ -250,4 +250,4 @@ You should get some response similar to below screen. It may vary sometimes.
 ![final-chart](https://github.com/user-attachments/assets/ea1a5b21-bc57-4ed8-a8a4-c187caff2c64)
 
 
-☑️ You've successfully completed the second exercise! Select **Next >** to go to the next exercise.
+☑️ You've successfully completed the second exercise! Select **Next >** to go a bonus exercise. 
