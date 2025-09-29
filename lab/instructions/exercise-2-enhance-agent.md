@@ -173,7 +173,7 @@ Continue to add card response for the `createRepair` operation to show what the 
 
 ## Step 3:  Provision and Test the Agent's
 
-Let's take the updated agent who is also now a repairs analyst to test. 
+You can now test the enhanced agent, which can now support additional operations.
 
 - Select the agents toolkit's extension icon to open its activity bar from within your project.
 - In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
