@@ -25,7 +25,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 ## Step 3: Define your agent 
 
 The Declarative Agent project scaffolded by the Agents Toolkit provides a template that includes code for connecting an agent to the GitHub API to display repository issues. In this lab, you'll build your own agent that integrates with a Repairs API service, supporting multiple operations to manage repair data.
-Before proceeding with the agent definition, take a moment to examine the Repairs API service to gain a clearer understanding of its functionality. s
+Before proceeding with the agent definition, take a moment to examine the Repairs API service to gain a clearer understanding of its functionality.
 
 ### Get to know the repair API service
 
@@ -83,7 +83,7 @@ Observe the structure of requests and responses and use the response data to und
 
 > Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
 
-#### 📊 Repairs API Overview
+#### Repairs API Overview
 
 **Base URL**: `https://repairshub.azurewebsites.net`
 
@@ -186,7 +186,7 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ````
 
-Now go back to `main.tsp` file and add the action you just defined into the agent. After the conversation starters replace the entire block of code with below snippet.
+Now go back to **main.tsp** file and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet, 
 
 ```typespec
 namespace RepairServiceAgent{  
@@ -198,6 +198,7 @@ namespace RepairServiceAgent{
     op listRepairs is global.RepairsAPI.listRepairs;   
   }
 }
+
 ```
 For now, you'll test only the GET operation. Additional operations will be explored in the next exercise.
 
@@ -229,7 +230,7 @@ This will take a while and you will be able to see a toaster message in VS Code,
 > [!knowledge] 
 > Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
 
-- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used from the `Resources` tab in this instruction.
+- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used from the "Resources" tab in this instruction.
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 

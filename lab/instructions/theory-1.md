@@ -10,7 +10,7 @@ As you build more agents for Copilot, you’ll notice that the final output is a
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | App manifest        | A JSON file (`manifest.json`) that defines the standard Teams app manifest.                                                                                     | Yes      |
 | Declarative agents manifest        | A JSON file containing the agent's name, instructions, capabilities, conversation starters, and actions (if applicable).                                        | Yes      |
-| Plugin Manifest       | A JSON file used to configure your action as an API plugin. Includes authentication, required fields, adaptive card responses, etc. Only needed if actions exist. | No       |
+| Plugin manifest       | A JSON file used to configure your action as an API plugin. Includes authentication, required fields, adaptive card responses, etc. Only needed if actions exist. | No       |
 | App icons            | A color and outline icon for your declarative agent.                                                                            | Yes    |
 
 ## Capabilities of a Declarative Agent
