@@ -169,9 +169,22 @@ Continue to add card response for the `createRepair` operation to show what the 
    @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
 
 ```
+## Step 3: Update agent instruction for new operations
+In the **main.tsp** file, update instructions definition to have additional directives for the agent.
+```typespec
+@instructions("""
+  ## Purpose
+You will assist the user in finding car repair records based on the information provided by the user. 
 
+  ## Guidelines
+- You are a repair service agent.
+- You can use the actions to create, update, and delete repairs.
+- When creating a repair item, if the user did not provide a description or date , use title as description and put todays date in format YYYY-MM-DD
+- Do not use any technical jargon or complex terms.
 
-## Step 3:  Provision and Test the Agent's
+""")
+```
+## Step 4:  Provision and Test the Agent's
 
 You can now test the enhanced agent, which can now support additional operations.
 
@@ -184,16 +197,17 @@ You can now test the enhanced agent, which can now support additional operations
 
     `Create a new repair titled "360 camera issue" and assign it to me.`
 
-- The confirmation dialog if you notice has more metadata that what you sent, thanks to the new instructions. 
+- The confirmation dialog if you notice has more metadata that what you sent, thanks to updated instructions.
 
-<img width="1089" height="846" alt="confirm" src="https://github.com/user-attachments/assets/34532abb-923d-434b-ae8e-260554a0209e" />
+<img width="994" height="593" alt="confirm" src="https://github.com/user-attachments/assets/f570f9fd-fa85-4ab1-9c3d-f9baf993dc95" />
 
  
  - Proceed to add the item by confirming the dialog.
 
  The agent responds is with created item shown in a rich adaptive card.
 
-<img width="1113" height="860" alt="success" src="https://github.com/user-attachments/assets/0e598c98-1899-42da-ae7b-c5d7e0082d78" />
+<img width="1031" height="619" alt="success" src="https://github.com/user-attachments/assets/d4d5906d-e5fb-4728-bb0c-b7a9f54215c5" />
+
 
 
 
@@ -203,7 +217,8 @@ You can now test the enhanced agent, which can now support additional operations
 
 The agent with the list with each referenced with an adaptive card.
 
-<img width="1110" height="640" alt="myissues" src="https://github.com/user-attachments/assets/6bb24a6c-e567-4961-83af-66cc6d899a1d" />
+<img width="996" height="591" alt="list" src="https://github.com/user-attachments/assets/8240525d-c683-40f9-aa68-d6ba9a19d0f2" />
+
 
 
 ☑️ You've successfully completed the second exercise which is enhacing your agent with more repair operations! Select **Next >** to go a bonus exercise. 
