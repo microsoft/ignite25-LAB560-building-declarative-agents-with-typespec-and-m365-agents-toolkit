@@ -96,7 +96,7 @@ op deleteRepair is global.RepairsAPI.deleteRepair;
 ## Step 2: Add adaptive card to function reference
 
 Next, you will enhance the reference cards or response cards using adaptive cards. Let's create an adaptive card for the repair items. 
-- In the project folder, create a new folder called **adaptiveCards** under the **appPackage** folder. Create a file **repair.json** in the **adaptiveCards** folder and paste the code snippet as is from below to the new file. 
+- In the project, go to the **adaptiveCards** folder under **appPackage** folder. Create a new file named **repair.json** and paste the provided code snippet. This will define a new adaptive card for the repair object. Ignore the default template card that is already present in this folder.
 
 ```json
 {
@@ -177,7 +177,7 @@ Next, you will enhance the agent by adding code interpreter capability to it.
 
 - To do this, open the **main.tsp** file and locate the `RepairServiceAgent` namespace which is where you define the agent behaviour.
 
-- Within this namespace, insert the following snippet to define a new operation that enables the agent to interpret and execute code.
+- Inside the namespace `RepairServiceAgent`, insert the following snippet above `@service` to define a new capability that enables the agent to interpret and execute code.
 
 ```typespec
   op codeInterpreter is AgentCapabilities.CodeInterpreter;
