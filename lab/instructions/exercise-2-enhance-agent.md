@@ -1,6 +1,6 @@
 # Exercise 2:  Enhance Agent capabilities
 
-Next, you will enhance the agent by adding more operations in the Repairs API service, enabling responses with Adaptive Cards, and incorporating code interpreter capabilities. Let's explore each of these enhancements step by step.
+Next, you will enhance the agent by adding more operations in the Repairs API service and enabling responses with Adaptive Cards. Let's explore each of these enhancements step by step.
 If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
