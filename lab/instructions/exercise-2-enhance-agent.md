@@ -1,10 +1,11 @@
 # Exercise 2:  Enhance Agent capabilities
 
-Next, you will enhance the agent by adding more operations, enabling responses with Adaptive Cards, and incorporating code interpreter capabilities. Let’s explore each of these enhancements step by step. Go back to the project in VS Code.
+Next, you will enhance the agent by adding more operations in the Repairs API service, enabling responses with Adaptive Cards, and incorporating code interpreter capabilities. Let's explore each of these enhancements step by step.
+If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
 
-- Go to file `actions.tsp` and copy paste below snippet just after `listRepairs` operation to add these new operations createRepair, updateRepair and deleteRepair. Here you are also defining the Repair item data model.
+- Go to file **actions.tsp** and copy paste below snippet just after `listRepairs` operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the `Repair` item data model.
 
 ```typespec
 /**
@@ -75,7 +76,7 @@ Next, you will enhance the agent by adding more operations, enabling responses w
 ```
 
 
-- Next, go back to `main.tsp` file and make sure these new operations are also added into the agent's action. Paste the below snippet after the line `op listRepairs is global.RepairsAPI.listRepairs;` inside the `RepairServiceActions` namespace
+- Next, go back to **main.tsp** file and make sure the new operations are also added as the agent's action. Paste the below snippet after the line `op listRepairs is global.RepairsAPI.listRepairs;` inside the `RepairServiceActions` namespace
 
 ```typespec
 op createRepair is global.RepairsAPI.createRepair;
@@ -94,9 +95,8 @@ op deleteRepair is global.RepairsAPI.deleteRepair;
 ```
 ## Step 2: Add adaptive card to function reference
 
-Next, you will enhance the reference cards or response cards using adaptive cards. Let’s take the listRepairs operation and add an adaptive card for the repair item. 
-
-- In the project folder, create a new folder called "adaptiveCards" under the "appPackage" folder. Create a file `repair.json` in the cards folder and paste the code snippet as is from below to the file. 
+Next, you will enhance the reference cards or response cards using adaptive cards. Let's create an adaptive card for the repair items. 
+- In the project folder, create a new folder called **adaptiveCards** under the **appPackage** folder. Create a file **repair.json** in the **adaptiveCards** folder and paste the code snippet as is from below to the new file. 
 
 ```json
 {
@@ -149,15 +149,17 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```
 
-- Next, go back to `actions.tsp` file and locate the listRepairs operation. Just above the operation definition `@get  op listRepairs(@query assignedTo?: string): string;`, paste the card definition using below snippet.
+- Next, go back to **actions.tsp** file and locate the listRepairs operation. Just above the operation definition `@get  op listRepairs(@query assignedTo?: string): string;`, paste the card definition using below snippet.
 
 ```typespec
 
   @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
   
   ```
-
 The above card response will be sent by the agent when you ask about a repair item or when agent brings a list of items as its reference.
+
+> To keep things simple for this lab, you'll reuse the same card. In practice, you could create separate cards for different operations based on your needs.
+ 
 Continue to add card response for the `createRepair` operation to show what the agent created after the POST operation. 
 
 - Copy paste below snippet just above the code `@post  op createRepair(@body repair: Repair): Repair;`
@@ -168,12 +170,12 @@ Continue to add card response for the `createRepair` operation to show what the 
 
 ```
 
-## Step 3:   Add code interpreter capabilities
+## Step 3: Add code interpreter capabilities
 
 Declarative Agents can be extended to have many capabilities like OneDriveAndSharePoint, WebSearch, CodeInterpreter etc
 Next, you will enhance the agent by adding code interpreter capability to it.
 
-- To do this, open the `main.tsp` file and locate the `RepairServiceAgent` namespace.
+- To do this, open the **main.tsp** file and locate the `RepairServiceAgent` namespace which is where you define the agent behaviour.
 
 - Within this namespace, insert the following snippet to define a new operation that enables the agent to interpret and execute code.
 
@@ -181,13 +183,12 @@ Next, you will enhance the agent by adding code interpreter capability to it.
   op codeInterpreter is AgentCapabilities.CodeInterpreter;
 ```
 
-
 >[!TIP]
-> When you add above codeinterpreter operation, paste it inside the outer `RepairServiceAgent` namespace and not the `RepairServiceActions` namespace which defines the action of the agent.  
+> When you add above codeinterpreter operation, paste it inside the outer `RepairServiceAgent` namespace which defines the agent's behaviour including the capabilities and not the `RepairServiceActions` namespace which defines the agent's actions.  
 
-Since the agent now supports additional functionality, update the instructions accordingly to reflect this enhancement.
+Since the agent now supports additional capability, update the instructions accordingly to reflect this enhancement.
 
-- In the same `main.tsp` file, update instructions definition to have additional directives for the agent.
+- In the same **main.tsp** file, update instructions definition to have additional directives for the agent.
 
 ```typespec
 @instructions("""
@@ -208,14 +209,14 @@ You will assist the user in finding car repair records based on the information 
 
 ## Step 4:  Provision and Test the Agent's
 
-Let’s take the updated agent who is also now a repairs analyst to test. 
+Let's take the updated agent who is also now a repairs analyst to test. 
 
 - Select the agents toolkit's extension icon to open its activity bar from within your project.
 - In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
-- Next, go back to the open Microsoft Edge browser tab and do a refresh. 
-- Select the **RepairServiceAgent** from the right side of the screen under **Agents**.
+- Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 
+- Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
-- Start by using the conversation starter 'Create repair'. Replace parts of the prompt to add a title , then send it to the chat to initiate the interaction. For e.g.
+- Start by using the conversation starter 'Create repair'. Replace parts of the prompt to add a title, then send it to the chat to initiate the interaction. For e.g.
 
     `Create a new repair titled "rear camera issue" and assign it to me.`
 
