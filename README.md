@@ -7,7 +7,7 @@
 ## LAB560 - Building Declarative Agents with TypeSpec and M365 Agents Toolkit
 
 
-### Abstract
+### Session Description
 
 Learn how to create intelligent, task-oriented Copilot agents using the native Microsoft 365 Copilot stack. In this hands-on lab, you'll use TypeSpec, a type safe language to write agent specification and the Microsoft 365 Agents Toolkit to build Declarative agents that integrate seamlessly with third party as well as Microsoft 365 services.
 
@@ -23,14 +23,35 @@ By the end of this lab, you will:
 
 ### Content Owners
 
-[Rabia Williams](https://github.com/rabwill) - Microsoft 365 Cloud Advocacy 
+<table>
+<tr>
+    <td align="center"><a href="http://github.com/rabwill">
+        <img src="https://github.com/rabwill.png" width="100px;" alt="Rabia Williams"/><br />
+        <sub><b> Rabia Williams
+</b></sub></a><br />
+            <a href="https://github.com/rabwill" title="talk"></a> 
+    </td>
+ 
+</tr></table>
 
-### Resources
+### Technologies Used
+- NodeJS
+- TypeSpec
+- Microsoft 365 Copilot
+- Microsoft 365 Agents Toolkit
+
+### Resources for this lab
 
 - [TypeSpec overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-typespec)
 - [Declarative agents overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-declarative-agent)
 - [Complete repair agent sample](https://aka.ms/repair-agent)
 - [Copilot Developer Camp](https://aka.ms/copilotdevcamp)
+
+| Resources          | Links                             | Description        |
+|:-------------------|:----------------------------------|:-------------------|
+| Ignite 2025 Next Steps | [https://aka.ms/Ignite25-Next-Steps](https://aka.ms/Ignite25-Next-Steps?ocid=ignite25_nextsteps_cnl) | Links to all repos for AI Tour 26 Sessions |
+| Azure AI Foundry Community Discord | [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)| Connect with the Azure AI Foundry Community! |
+| Learn at Ignite | [https://aka.ms/LearnAtIgnite](https://aka.ms/LearnAtIgnite?ocid=ignite25_nextsteps_github_cnl) | Continue learning on Microsoft Learn |
 
 
 ## Contributing
