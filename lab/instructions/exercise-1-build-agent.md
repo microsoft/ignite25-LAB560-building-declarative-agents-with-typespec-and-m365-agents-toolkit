@@ -232,9 +232,10 @@ Next step is to test the Repair Service Agent. For this first you need to provis
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
->[!TIP]
->If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
->![time out error](https://github.com/user-attachments/assets/b5a9f569-bb3b-44e8-a217-502d0fd31ce4)
+
+If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
+
+![time out error](https://github.com/user-attachments/assets/b5a9f569-bb3b-44e8-a217-502d0fd31ce4)
 
 > [!NOTE] 
 > Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
@@ -247,11 +248,11 @@ This will take a while and you will be able to see a toaster message in VS Code,
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
-- Select the conversation starter - `List repairs` and send the prompt to the chat to initiate conversation with your agent and check out the response.
+- Select the conversation starter - `List repairs` and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
 
-> [!help] 
-> When prompted to connect the agent to process a query, you’ll usually see this screen just once.
-> To streamline your experience in this lab, select **"Always allow"** when it appears.
+- To streamline your experience in this lab, select **"Always allow"** when it appears.
+
+  Once accepted you will see the response from the agent as below: 
 
 ![ex1-dem0-01](https://github.com/user-attachments/assets/02400c13-0766-4440-999b-93c88ca45dc7)
 
