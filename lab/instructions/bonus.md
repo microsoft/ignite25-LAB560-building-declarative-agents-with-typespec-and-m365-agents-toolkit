@@ -39,7 +39,11 @@ You will assist the user in finding car repair records based on the information 
 
 ### Step 2: Test your agent's new capabiility
 
-- Next, you will test the new analytical capability of your agent. Open a new chat by selecting the **New chat** button on the top right corner of your agent.
+Next, you will test the new analytical capability of your agent. You will need to reprovision the agent. Follow below steps:
+
+- Save all changes, select the Agents toolkit extension icon, to open the activity bar from within your project.
+- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will reprovision the agent.
+- Open a new chat by selecting the **New chat** button on the top right corner of your agent.
 - Next, copy the prompt below and paste it to the message box and hit enter to send it.
 
     `Classify repair items based on title into three distinct categories: Routine Maintenance, Critical, and Low Priority. Then, generate a pie chart displaying the percentage representation of each category. Use unique colours for each group and incorporate tooltips to show the precise values for each segment.`
