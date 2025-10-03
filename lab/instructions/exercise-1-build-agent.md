@@ -22,6 +22,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 -	In the virtual machine, log into the Microsoft 365 tenant using below credentials:
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
+
 **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 -	Once signed in, close the browser and go back to the project window.
@@ -82,7 +83,7 @@ Content-Type: application/json
 To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
 Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
 
-[http request](https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249)
+![http request](https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249)
 
 
 > Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
@@ -188,7 +189,7 @@ Replace the entire block of code starting just after the SERVER_URL definition a
   @route("/repairs")
   @get  op listRepairs(@query assignedTo?: string): string;
 
-````
+```
 
 Now go back to **main.tsp** file and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet, 
 
