@@ -23,7 +23,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-**Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
+**Pass: +++@lab.CloudPortalCredential(User1).Password+++**
 
 -	Once signed in, close the browser and go back to the project window.
 
@@ -243,7 +243,7 @@ This will take a while and you will be able to see a toaster message in VS Code,
   
   **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-  **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
+  **Pass: +++@lab.CloudPortalCredential(User1).Password+++**
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
