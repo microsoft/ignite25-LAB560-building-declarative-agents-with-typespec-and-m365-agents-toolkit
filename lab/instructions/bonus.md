@@ -45,8 +45,7 @@ You will assist the user in finding car repair records based on the information 
     `Classify repair items based on title into three distinct categories: Routine Maintenance, Critical, and Low Priority. Then, generate a pie chart displaying the percentage representation of each category. Use unique colours for each group and incorporate tooltips to show the precise values for each segment.`
 
 You should get some response similar to below screen. It may vary sometimes. 
-
-<img width="1119" height="858" alt="chart" src="https://github.com/user-attachments/assets/8ccc7758-28ec-42ff-96fd-2341cad6c9ed" />
+![reposne with chart using code interpreter](https://github.com/user-attachments/assets/8ccc7758-28ec-42ff-96fd-2341cad6c9ed)
 
 
 ☑️ Great job completing all the exercises! Click **Next >** to finish up this lab.

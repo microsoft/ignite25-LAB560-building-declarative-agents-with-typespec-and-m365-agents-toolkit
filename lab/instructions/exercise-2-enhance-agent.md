@@ -199,16 +199,14 @@ You can now test the enhanced agent, which can now support additional operations
 
 - The confirmation dialog if you notice has more metadata that what you sent, thanks to updated instructions.
 
-<img width="994" height="593" alt="confirm" src="https://github.com/user-attachments/assets/f570f9fd-fa85-4ab1-9c3d-f9baf993dc95" />
+![response from Create a new repair titled "360 camera issue" and assign it to me](https://github.com/user-attachments/assets/f570f9fd-fa85-4ab1-9c3d-f9baf993dc95)
 
  
  - Proceed to add the item by confirming the dialog.
 
  The agent responds is with created item shown in a rich adaptive card.
 
-<img width="1031" height="619" alt="success" src="https://github.com/user-attachments/assets/d4d5906d-e5fb-4728-bb0c-b7a9f54215c5" />
-
-
+![adaptive card response](https://github.com/user-attachments/assets/d4d5906d-e5fb-4728-bb0c-b7a9f54215c5)
 
 
  - Next, recheck reference cards work. Send below prompt in the conversation
@@ -217,7 +215,7 @@ You can now test the enhanced agent, which can now support additional operations
 
 The agent with the list with each referenced with an adaptive card.
 
-<img width="996" height="591" alt="list" src="https://github.com/user-attachments/assets/8240525d-c683-40f9-aa68-d6ba9a19d0f2" />
+![list all repairs with new repair added](https://github.com/user-attachments/assets/8240525d-c683-40f9-aa68-d6ba9a19d0f2)
 
 
 

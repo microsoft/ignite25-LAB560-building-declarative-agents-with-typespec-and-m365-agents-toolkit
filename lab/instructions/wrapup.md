@@ -4,7 +4,7 @@
 
 End this lab by selecting the **End** button from the menu as shown below:
 
-<img width="1498" height="880" alt="end" src="https://github.com/user-attachments/assets/92487094-a9fa-4200-9b81-aac9229470d1" />
+![end lab image](https://github.com/user-attachments/assets/92487094-a9fa-4200-9b81-aac9229470d1)
 
 
 # Next Steps
