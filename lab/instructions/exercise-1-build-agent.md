@@ -232,10 +232,18 @@ Next step is to test the Repair Service Agent.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
-> [!knowledge] 
+>[!TIP]
+>If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
+>![time out error](https://github.com/user-attachments/assets/b5a9f569-bb3b-44e8-a217-502d0fd31ce4)
+
+> [!NOTE] 
 > Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
 
-- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used from the "Resources" tab in this instruction.
+- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used before:
+  
+  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
+
+  **Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
