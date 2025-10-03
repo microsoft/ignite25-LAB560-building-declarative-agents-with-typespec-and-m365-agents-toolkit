@@ -226,7 +226,7 @@ Check this table to understand some of the decorators used in these files
 
 ## Step 5: Test your agent
 
-Next step is to test the Repair Service Agent. For this first we need to provision the agent to your tenant. Follow below steps:
+Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
 - Select the Agents toolkit extension icon, to open the activity bar from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
