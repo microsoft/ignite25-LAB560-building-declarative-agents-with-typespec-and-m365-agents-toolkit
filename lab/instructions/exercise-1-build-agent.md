@@ -19,7 +19,11 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 
 -	Within the project window, select the Microsoft 365 Agents Toolkit icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" /> again, from the left side menu. This will open the agent toolkit’s activity bar with sections like Accounts, Environment, Development etc. 
 -	Under "Accounts" section select "Sign in to Microsoft 365". This will open a dialog from the editor to sign in or create a Microsoft 365 developer sandbox or Cancel. Select "Sign in". 
--	In the virtual machine, the credentials to log into the Microsoft 365 tenant will be given in the same "Resources" panel where this instruction is, under title "Azure portal". Use the username and password provided. Make sure you use the copy text instruction.
+-	In the virtual machine, log into the Microsoft 365 tenant using below credentials:
+
+**Username: +++@lab.CloudPortalCredential(User1).Username+++**
+**Temporary Access Pass: +++@lab.CloudPortalCredential(User1).AccessToken+++**
+
 -	Once signed in, close the browser and go back to the project window.
 
 ## Step 3: Define your agent 
@@ -78,7 +82,7 @@ Content-Type: application/json
 To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
 Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
 
-<img width="1457" height="874" alt="httpfile" src="https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249" />
+[http request](https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249)
 
 
 > Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
