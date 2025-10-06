@@ -23,7 +23,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-**Pass: +++@lab.CloudPortalCredential(User1).Password+++**
+**TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 -	Once signed in, close the browser and go back to the project window.
 
