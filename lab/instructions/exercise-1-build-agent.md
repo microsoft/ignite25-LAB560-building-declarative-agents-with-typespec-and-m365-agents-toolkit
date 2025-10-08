@@ -23,7 +23,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 
 **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-**TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++**
+**TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 -	Once signed in, close the browser and go back to the project window.
 
@@ -244,7 +244,7 @@ If you run into a time out issue as shown below, just quit and reopen your VS Co
   
   **Username: +++@lab.CloudPortalCredential(User1).Username+++**
 
-  **Pass: +++@lab.CloudPortalCredential(User1).Password+++**
+  **TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
