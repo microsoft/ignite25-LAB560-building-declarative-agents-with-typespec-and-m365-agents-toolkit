@@ -5,7 +5,7 @@ If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
 
-- Go to file **actions.tsp** and copy paste below snippet just after `listRepairs` operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the `Repair` item data model.
+- Go to file **actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the **Repair** item data model.
 
 ```typespec
 /**
@@ -76,7 +76,7 @@ If you are in the browser, go back to your project in VS Code.
 ```
 
 
-- Next, go back to **main.tsp** file and make sure the new operations are also added as the agent's action. Paste the below snippet after the line `op listRepairs is global.RepairsAPI.listRepairs;` inside the `RepairServiceActions` namespace
+- Next, go back to **main.tsp** file and make sure the new operations are also added as the agent's action. Paste the below snippet after the line **op listRepairs is global.RepairsAPI.listRepairs;** inside the **RepairServiceActions** namespace
 
 ```typespec
 op createRepair is global.RepairsAPI.createRepair;
@@ -149,7 +149,7 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```
 
-- Next, go back to **actions.tsp** file and locate the listRepairs operation. Just above the operation definition `@get  op listRepairs(@query assignedTo?: string): string;`, paste the card definition using below snippet.
+- Next, go back to **actions.tsp** file and locate the listRepairs operation. Just above the operation definition **@get  op listRepairs(@query assignedTo?: string): string;**, paste the card definition using below snippet.
 
 ```typespec
 
@@ -160,9 +160,9 @@ The above card response will be sent by the agent when you ask about a repair it
 
 > To keep things simple for this lab, you'll reuse the same card. In practice, you could create separate cards for different operations based on your needs.
  
-Continue to add card response for the `createRepair` operation to show what the agent created after the POST operation. 
+Continue to add card response for the **createRepair** operation to show what the agent created after the POST operation. 
 
-- Copy paste below snippet just above the code `@post  op createRepair(@body repair: Repair): Repair;`
+- Copy paste below snippet just above the code **@post  op createRepair(@body repair: Repair): Repair;**
 
 ```typespec
 

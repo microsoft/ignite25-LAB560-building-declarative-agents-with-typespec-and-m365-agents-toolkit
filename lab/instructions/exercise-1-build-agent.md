@@ -12,6 +12,8 @@ You will create an agent called **RepairServiceAgent**, which interacts with rep
 -	Next, select the folder where you want the agents toolkit to scaffold the agent project.
 -	Next, give an application name like - "RepairServiceAgent" and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
 
+> [!NOTE] 
+> Ignore any alerts in VS Code such as "No TypeSpec compiler found…" prompting you to install the compiler. These can be safely disregarded.
 
 ## Step 2: Sign into the Microsoft 365 Agents Toolkit 
 
@@ -228,7 +230,7 @@ Check this table to understand some of the decorators used in these files
 
 Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
-- Select the Agents toolkit extension icon, to open the activity bar from within your project.
+- Select the Agents toolkit extension icon. This will open the activity bar for agents toolkit from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
@@ -248,7 +250,7 @@ If you run into a time out issue as shown below, just quit and reopen your VS Co
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
-- Select the conversation starter - `List repairs` and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
+- Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
 
 - To streamline your experience in this lab, select **"Always allow"** when it appears.
 
