@@ -3,15 +3,23 @@
 It’s time to build your first Declarative Agent using Microsoft 365 Agents Toolkit. 
 You will create an agent called **RepairServiceAgent**, which interacts with repairs data via an existing Repairs API service to help users manage car repair records.
 
+Once signed into the machine, you will be able to access VS Code from the desktop. Open VS Code.
+
+>[!TIP]
+> When you  open the folder in VS Code, you may get a prompt window asking if you trust the authors of the files in the folder. This is expected and you can safely select **Yes, I trust the authors**. The dialog is a security safeguard that helps you decide whether to run all features or limit execution based on the trustworthiness of the code authors. If you're opening your own code or from a reliable source, it's safe to trust.
+
 
 ## Step 1: Scaffold your base agent project using Microsoft 365 Agents Toolkit
--	Locate the Microsoft 365 Agents Toolkit icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" /> from the VS Code menu on the left and select it. An activity bar will be open. 
+
+- In VS Code, locate the Microsoft 365 Agents Toolkit icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" /> from the VS Code menu on the left and select it. An activity bar will be open. 
 -	Select the "Create a New Agent/App" button in the activity bar which will open the palette with a list of app templates available on Microsoft 365 Agents Toolkit.
 -	Choose "Declarative Agent" from the list of templates.
 -	Next, select "Start with TypeSpec for Microsoft 365 Copilot" to define your agent using TypeSpec.
 -	Next, select the folder where you want the agents toolkit to scaffold the agent project.
--	Next, give an application name like - "RepairServiceAgent" and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
+-	Next, give an application name like - +++RepairServiceAgent+++ and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
 
+> [!NOTE] 
+> Ignore any alerts in VS Code such as "No TypeSpec compiler found…" prompting you to install the compiler. These can be safely disregarded.
 
 ## Step 2: Sign into the Microsoft 365 Agents Toolkit 
 
@@ -37,7 +45,7 @@ Before proceeding with the agent definition, take a moment to examine the Repair
 You'll need to explore endpoints and payloads of the API service interactively. Using a **.http** file in Visual Studio Code with the REST Client extension, which is already installed for you,  allows you to define and send HTTP requests directly from your editor. It's a lightweight, code-friendly way to test APIs, inspect responses, and iterate quickly without switching to external tools.
 
 Inside the root folder of the projected you just created,  create a folder called **http**. 
-Create a new file named **repairs-api.http** inside the http folder.
+Create a new file named +++repairs-api.http+++ inside the http folder.
 Copy paste below content into the file.
 
 ```
@@ -80,17 +88,19 @@ Content-Type: application/json
 }
 ```
 
+> Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
+
 To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
 Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
 
 ![http request](https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249)
 
 
-> Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
+
 
 #### Repairs API Overview
 
-**Base URL**: `https://repairshub.azurewebsites.net`
+**Base URL**: *https://repairshub.azurewebsites.net*
 
 | Operation | Method | Endpoint | Payload required | Purpose |
 |-----------|--------|----------|------------------|---------|
@@ -228,7 +238,7 @@ Check this table to understand some of the decorators used in these files
 
 Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
-- Select the Agents toolkit extension icon, to open the activity bar from within your project.
+- Select the Agents toolkit extension icon. This will open the activity bar for agents toolkit from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
@@ -248,7 +258,7 @@ If you run into a time out issue as shown below, just quit and reopen your VS Co
 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 
-- Select the conversation starter - `List repairs` and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
+- Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
 
 - To streamline your experience in this lab, select **"Always allow"** when it appears.
 
