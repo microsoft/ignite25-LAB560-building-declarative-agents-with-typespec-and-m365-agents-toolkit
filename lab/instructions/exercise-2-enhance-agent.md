@@ -96,7 +96,7 @@ op deleteRepair is global.RepairsAPI.deleteRepair;
 ## Step 2: Add adaptive card to function reference
 
 Next, you will enhance the reference cards or response cards using adaptive cards. Let's create an adaptive card for the repair items. 
-- In the project, go to the **adaptiveCards** folder under **appPackage** folder. Create a new file named **repair.json** and paste the provided code snippet. This will define a new adaptive card for the repair object. Ignore the default template card that is already present in this folder.
+- In the project, go to the **adaptiveCards** folder under **appPackage** folder. Create a new file named +++repair.json+++ and paste the provided code snippet. This will define a new adaptive card for the repair object. Ignore the default template card that is already present in this folder.
 
 ```json
 {
