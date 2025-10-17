@@ -186,7 +186,7 @@ You will assist the user in finding car repair records based on the information 
 ```
 ## Step 4:  Provision and Test the Agent's
 
-You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent. Follow below steps to proceed: 
+You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
 
 - Select the agents toolkit's extension icon to open its activity bar from within your project.
 - In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
