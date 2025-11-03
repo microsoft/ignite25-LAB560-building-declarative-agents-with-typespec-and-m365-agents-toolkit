@@ -15,7 +15,7 @@ Once signed into the machine, you will be able to access VS Code from the deskto
 -	Select the "Create a New Agent/App" button in the activity bar which will open the palette with a list of app templates available on Microsoft 365 Agents Toolkit.
 -	Choose "Declarative Agent" from the list of templates.
 -	Next, select "Start with TypeSpec for Microsoft 365 Copilot" to define your agent using TypeSpec.
--	Next, select the folder where you want the agents toolkit to scaffold the agent project.
+-	Next, select the **Default folder** where you want the agents toolkit to scaffold the agent project.
 -	Next, give an application name like - +++RepairServiceAgent+++ and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
 
 > [!NOTE] 
@@ -44,8 +44,15 @@ Before proceeding with the agent definition, take a moment to examine the Repair
 
 You'll need to explore endpoints and payloads of the API service interactively. Using a **.http** file in Visual Studio Code with the REST Client extension, which is already installed for you,  allows you to define and send HTTP requests directly from your editor. It's a lightweight, code-friendly way to test APIs, inspect responses, and iterate quickly without switching to external tools.
 
-Inside the root folder of the projected you just created,  create a folder called **http**. 
+Inside the root folder of the project you just created, create a folder called **http**. 
 Create a new file named +++repairs-api.http+++ inside the http folder.
+
+>[!TIP]
+> **Creating folders and files in VS Code:**
+> - To create a new folder: Right-click in the Explorer panel (file tree) on the left side of VS Code, select "New Folder", and type the folder name.
+> - To create a new file: Right-click on the folder where you want to add the file, select "New File", and type the filename with its extension.
+> - Alternatively, you can use the icons in the Explorer panel: the folder icon (📁) creates a new folder, and the file icon (📄) creates a new file in the currently selected location.
+
 Copy paste below content into the file.
 
 ```
@@ -238,7 +245,7 @@ Check this table to understand some of the decorators used in these files
 
 Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
-- Select the Agents toolkit extension icon. This will open the activity bar for agents toolkit from within your project.
+- Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 

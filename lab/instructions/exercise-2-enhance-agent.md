@@ -184,11 +184,11 @@ You will assist the user in finding car repair records based on the information 
 
 """)
 ```
-## Step 4:  Provision and Test the Agent's
+## Step 4:  Provision and Test the Agent
 
 You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
 
-- Select the agents toolkit's extension icon to open its activity bar from within your project.
+- Select the agents toolkit's extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />  to open its activity bar from within your project.
 - In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
 - Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
@@ -209,7 +209,7 @@ You can now test the enhanced agent, which can now support additional operations
 ![adaptive card response](https://github.com/user-attachments/assets/d4d5906d-e5fb-4728-bb0c-b7a9f54215c5)
 
 
- - Next, recheck reference cards work. Send below prompt in the conversation
+- Next, recheck reference cards work. Open a new chat and then send below prompt in the conversation
 
      `List all my repairs.`
 

@@ -4,7 +4,7 @@
 
 ## Anatomy of a Declarative Agent
 
-As you build more agents for Copilot, you’ll notice that the final output is a set of a few files bundled into a zip file what we call an app package, that you'll install and use. So it's important you have a basic understanding of what the app package consists of. The app package of a Declarative Agent is similar to a Teams app if you have built one before with additonal elements. See the table to see all the core elements. You will also see that the app deployment process is very similar to deploying a teams app.
+As you build more agents for Copilot, you’ll notice that the final output is a set of a few files bundled into a zip file what we call an app package, that you'll install and use. So it's important you have a basic understanding of what the app package consists of. The app package of a Declarative Agent is similar to a Teams app if you have built one before with additonal elements. See the table to see all the core elements. You will also see that the app deployment process is very similar to deploying a Teams app.
 
 | File Type                          | Description                                                                                                                                                     | Required |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|

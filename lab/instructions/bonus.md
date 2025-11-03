@@ -41,7 +41,7 @@ You will assist the user in finding car repair records based on the information 
 
 Next, you will test the new analytical capability of your agent. You will need to reprovision the agent. Follow below steps:
 
-- Save all changes, select the Agents toolkit extension icon, to open the activity bar from within your project.
+- Save all changes, select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />, to open the activity bar from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will reprovision the agent.
 - Open a new chat by selecting the **New chat** button on the top right corner of your agent.
 - Next, copy the prompt below and paste it to the message box and hit enter to send it.
