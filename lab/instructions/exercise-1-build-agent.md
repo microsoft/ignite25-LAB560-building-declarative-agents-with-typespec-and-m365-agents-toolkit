@@ -268,6 +268,8 @@ If you run into a time out issue as shown below, just quit and reopen your VS Co
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**. 
 
 > If you don't see left navigation to choose agent,  look for below icon and select it to show the navigation.
+> ![find agents nav](https://github.com/user-attachments/assets/0d603d1b-6458-4766-9063-4f87597f10dc)
+
 
 - Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
 
