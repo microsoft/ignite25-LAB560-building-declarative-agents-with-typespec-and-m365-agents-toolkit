@@ -246,7 +246,9 @@ Check this table to understand some of the decorators used in these files
 Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
-- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
+- In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select **manifest.json** when prompted. 
+- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted. 
+- Next, in the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
 
@@ -263,7 +265,9 @@ If you run into a time out issue as shown below, just quit and reopen your VS Co
 
   **TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
 
-- Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
+- Select the **RepairServiceAgent** from the left side of the screen under **Agents**. 
+
+> If you don't see left navigation to choose agent,  look for below icon and select it to show the navigation.
 
 - Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
 
