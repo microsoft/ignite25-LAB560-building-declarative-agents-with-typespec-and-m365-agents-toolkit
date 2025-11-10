@@ -5,9 +5,6 @@ You will create an agent called **RepairServiceAgent**, which interacts with rep
 
 Once signed into the machine, you will be able to access VS Code from the desktop. Open VS Code.
 
->[!TIP]
-> When you open the folder in VS Code, you may get a prompt window asking if you trust the authors of the files in the folder. This is expected and you can safely select **Yes, I trust the authors**. The dialog is a security safeguard that helps you decide whether to run all features or limit execution based on the trustworthiness of the code authors. If you're opening your own code or from a reliable source, it's safe to trust.
-
 
 ## Step 1: Scaffold your base agent project using Microsoft 365 Agents Toolkit
 
@@ -20,6 +17,9 @@ Once signed into the machine, you will be able to access VS Code from the deskto
 
 > [!NOTE] 
 > Ignore any alerts in VS Code such as "No TypeSpec compiler found…" prompting you to install the compiler. These can be safely disregarded.
+
+>[!TIP]
+> You may get a prompt window asking if you trust the authors of the files in the folder. This is expected and you can safely select **Yes, I trust the authors**. The dialog is a security safeguard that helps you decide whether to run all features or limit execution based on the trustworthiness of the code authors. If you're opening your own code or from a reliable source, it's safe to trust.
 
 ## Step 2: Sign into the Microsoft 365 Agents Toolkit 
 
