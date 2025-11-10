@@ -251,6 +251,9 @@ Next step is to test the Repair Service Agent. For this first you need to provis
 - Next, in the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
+> [!NOTE] 
+> If for some reason the action "Provsion" fails, check your **.env.dev** file to see if if you have a variable **AGENT_SCOPE=**. If present, change the variable value from `shared` to `personal`. 
+
 
 If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
 
