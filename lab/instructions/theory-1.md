@@ -27,7 +27,7 @@ You can enhance the agent's focus on context and data by not only adding instruc
 - **Teams messages** - enables you to equip the agent to search through Teams channels, teams, meetings, 1:1 chats, and group chats.
 - **Dataverse knowledge** - enables you to add a Dataverse instance as a knowledge source.
 - **Scenario models** - enables you to add task-specific models.
-- **Meetings**- enables you to build an agent to search for information about meetings in the organization.
+- **Teams Meetings**- enables you to build an agent to search for information about meetings in the organization.
 
 
 
