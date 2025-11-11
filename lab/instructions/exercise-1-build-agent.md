@@ -98,7 +98,7 @@ Content-Type: application/json
 
 > Note there is a small delay to process the request from the editor, but the response should come back in a few seconds.
 
-To run each request, hover over each request line (e.g., `GET {{base_url}}/repairs`) and click **Send Request** to see the response.
+To run each request, hover over each request line (e.g., GET {{base_url}}/repairs) and click **Send Request** to see the response.
 Observe the structure of requests and responses and use the response data to understand how your agent will interact with the API.
 
 ![http request](https://github.com/user-attachments/assets/050ca976-4523-463d-920f-4f0f2da46249)
