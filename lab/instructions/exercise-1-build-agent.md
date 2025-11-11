@@ -42,9 +42,9 @@ Before proceeding with the agent definition, take a moment to examine the Repair
 
 ### Get to know the repair API service
 
-You'll need to explore endpoints and payloads of the API service interactively. Using a **.http** file in Visual Studio Code with the REST Client extension, which is already installed for you,  allows you to define and send HTTP requests directly from your editor. It's a lightweight, code-friendly way to test APIs, inspect responses, and iterate quickly without switching to external tools.
+You'll need to explore endpoints and payloads of the API service interactively. Using a **.http** file in Visual Studio Code with the REST Client extension, which is already installed for you, allows you to define and send HTTP requests directly from your editor. It's a lightweight, code-friendly way to test APIs, inspect responses, and iterate quickly without switching to external tools.
 
-Inside the root folder of the project you just created, create a folder called **http**. 
+Inside the root folder of the project you just created, create a folder called **http**.
 Create a new file named +++repairs-api.http+++ inside the http folder.
 
 >[!TIP]
@@ -117,13 +117,13 @@ Observe the structure of requests and responses and use the response data to und
 | Update a repair request | PATCH | /repairs/{id} | Yes | Modify an existing repair job |
 | Delete a repair request | DELETE | /repairs/{id} | No | Remove a repair job by ID |
 
-Now that you’re familiar with the API service, let’s move on to integrating it with your agent.
+Now that you're familiar with the API service, let's move on to integrating it with your agent.
 
 In the project folder, you will find two **TypeSpec** files **main.tsp** and **actions.tsp**.
 The agent is defined with its metadata, instructions and capabilities in the **main.tsp** file.
-You'll use the **actions.tsp** file to define your agent’s actions like connecting with the Repairs API service.
+You'll use the **actions.tsp** file to define your agent's actions like connecting with the Repairs API service.
 
-Open **main.tsp** and inspect what is there in the default template, which you will modify for our agent's repair service scenario. 
+Open **main.tsp** and inspect what is there in the default template, which you will modify for our agent's repair service scenario.
 
 ### Update the Agent Metadata and Instructions
 
@@ -135,7 +135,7 @@ In the **main.tsp** file, you will find the basic structure of the agent. Review
 ![agent template](https://github.com/user-attachments/assets/42da513c-d814-456f-b60f-a4d9201d1620)
 
 
-Begin by defining your agent for the repair scenario. Replace the "@agent" and "@instructions" definitions with below code snippet.
+Begin by defining your agent for the repair scenario. Replace the **@agent** and **@instructions** definitions with below code snippet.
 
 ```typespec
 @agent(
@@ -208,7 +208,7 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ```
 
-Now go back to **main.tsp** file and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet, 
+Now go back to **main.tsp** file and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
 
 ```typespec
 namespace RepairServiceAgent{  
@@ -237,7 +237,7 @@ Check this table to understand some of the decorators used in these files
 | @agent             | Defines the namespace (name) and description of the agent                                                                                                       |
 | @instructions       | Defines the instructions that prescribe the behaviour of the agent. 8000 characters or less                                                                     |
 | @conversationStarter | Defines conversation starters for the agent                                                                                                                     |
-| @op            | Defines any operation. Either it can be an operation to define agent’s capabilities like *op GraphicArt*, *op CodeInterpreter* etc., or define API operations like **op listRepairs**. For a post operation, define it like: *op createRepair(@body repair: Repair): Repair;*                                                                                                               |
+| @op            | Defines any operation. Either it can be an operation to define agent's capabilities like *op GraphicArt*, *op CodeInterpreter* etc., or define API operations like **op listRepairs**. For a post operation, define it like: *op createRepair(@body repair: Repair): Repair;*                                                                                                               |
 | @server           | Defines the server endpoint of the API and its name                                                                                                              |
 | @capabilities      | When used inside a function, it defines simple adaptive cards with small definitions like a confirmation card for the operation                                  |
 
@@ -251,8 +251,8 @@ Next step is to test the Repair Service Agent. For this first you need to provis
 - Next, in the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
-> [!NOTE] 
-> If for some reason the action "Provsion" fails, check your **.env.dev** file to see if if you have a variable **AGENT_SCOPE=**. If present, change the variable value from `shared` to `personal`. 
+> [!NOTE]
+> If for some reason the action "Provision" fails, check your **.env.dev** file to see if you have a variable **AGENT_SCOPE=**. If present, change the variable value from `shared` to `personal`.
 
 
 If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.

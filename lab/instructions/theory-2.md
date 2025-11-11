@@ -14,7 +14,7 @@ If you like how TypeScript enforces structure in your frontend/backend code, you
 
 - **Automation Friendly** - automatically generates OpenAPI specs and other manifests saving time and reducing human errors.
 
-- **Early Validation** - catches design issues early before writing actual code for example, mismatched data types or unclear definintions.
+- **Early Validation** - catches design issues early before writing actual code for example, mismatched data types or unclear definitions.
 
 - **Design-First Approach** - encourages thinking about agent and API structure and contracts before jumping into implementation, leading to better long-term maintainability.
 
