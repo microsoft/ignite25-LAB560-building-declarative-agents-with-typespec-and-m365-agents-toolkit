@@ -38,6 +38,7 @@ You'll need to sign into the Microsoft 365 Agents Toolkit in order to upload and
 ## Step 3: Define your agent 
 
 The Declarative Agent project scaffolded by the Agents Toolkit provides a template that includes code for connecting an agent to the GitHub API to display repository issues. In this lab, you'll build your own agent that integrates with a Repairs API service, supporting multiple operations to manage repair data.
+
 Before proceeding with the agent definition, take a moment to examine the Repairs API service to gain a clearer understanding of its functionality.
 
 ### Get to know the repair API service
@@ -161,7 +162,7 @@ Next, configure a conversation starter, the initial prompt that begins user-agen
 })
 
 ```
-This prompt triggers a GET operation to retrieve all repairs from the service. To enable this behaviour in the agent, you' ll need to define the corresponding action. Proceed to the next step to do so.
+This starter prompt needs to trigger a GET operation to retrieve all repairs from the service. To enable this behaviour in the agent, you' ll need to define the corresponding action. Proceed to the next step to do so.
 
 ### Define the action for the agent
 
@@ -212,7 +213,6 @@ Now go back to **main.tsp** file and add the action you just defined into the ag
 
 ```typespec
 namespace RepairServiceAgent{  
-  // Uncomment this part to add actions to the agent.
   @service
   @server(global.RepairsAPI.SERVER_URL)
   @actions(global.RepairsAPI.ACTIONS_METADATA)
@@ -247,7 +247,7 @@ Next step is to test the Repair Service Agent. For this first you need to provis
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
 - In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select **manifest.json** when prompted. 
-- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted. 
+- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted. Select the zip file that was created in above step.
 - Next, in the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
