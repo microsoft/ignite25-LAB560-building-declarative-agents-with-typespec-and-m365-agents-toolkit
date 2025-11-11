@@ -5,7 +5,7 @@ If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
 
-- Go to file **actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the **Repair** item data model.
+- Go to file `actions.tsp` and copy paste below snippet just after `listRepairs` operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the `Repair` item data model.
 
 ```typespec
 /**
@@ -76,7 +76,7 @@ If you are in the browser, go back to your project in VS Code.
 ```
 
 
-- Next, go back to **main.tsp** file and make sure the new operations are also added as the agent's action. Paste the below snippet after the line **op listRepairs is global.RepairsAPI.listRepairs;** inside the **RepairServiceActions** namespace
+- Next, go back to `main.tsp` file and make sure the new operations are also added as the agent's action. Paste the below snippet after the line `op listRepairs is global.RepairsAPI.listRepairs;` inside the `RepairServiceActions` namespace
 
 ```typespec
 op createRepair is global.RepairsAPI.createRepair;
@@ -95,8 +95,9 @@ op deleteRepair is global.RepairsAPI.deleteRepair;
 ```
 ## Step 2: Add adaptive card to function reference
 
-Next, you will enhance the reference cards or response cards using adaptive cards. Let's create an adaptive card for the repair items. 
-- In the project, go to the **adaptiveCards** folder under **appPackage** folder. Create a new file named +++repair.json+++ and paste the provided code snippet. This will define a new adaptive card for the repair object. Ignore the default template card that is already present in this folder.
+Next, you will enhance the reference cards or response cards using adaptive cards. Let's create an adaptive card for the repair items.
+
+- In the project, go to the `adaptiveCards` folder under `appPackage` folder. Create a new file named +++repair.json+++ and paste the provided code snippet. This will define a new adaptive card for the repair object. Ignore the default template card that is already present in this folder.
 
 ```json
 {
@@ -149,7 +150,7 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```
 
-- Next, go back to **actions.tsp** file and locate the listRepairs operation. Just above the operation definition **@get  op listRepairs(@query assignedTo?: string): string;**, paste the card definition using below snippet.
+- Next, go back to `actions.tsp` file and locate the listRepairs operation. Just above the operation definition `@get  op listRepairs(@query assignedTo?: string): string;`, paste the card definition using below snippet.
 
 ```typespec
 
@@ -159,10 +160,10 @@ Next, you will enhance the reference cards or response cards using adaptive card
 The above card response will be sent by the agent when you ask about a repair item or when agent brings a list of items as its reference.
 
 > To keep things simple for this lab, you'll reuse the same card. In practice, you could create separate cards for different operations based on your needs.
- 
-Continue to add card response for the **createRepair** operation to show what the agent created after the POST operation. 
 
-- Copy paste below snippet just above the code **@post  op createRepair(@body repair: Repair): Repair;**
+Continue to add card response for the `createRepair` operation to show what the agent created after the POST operation.
+
+- Copy paste below snippet just above the code `@post  op createRepair(@body repair: Repair): Repair;`
 
 ```typespec
 
@@ -170,7 +171,8 @@ Continue to add card response for the **createRepair** operation to show what th
 
 ```
 ## Step 3: Update agent instruction for new operations
-In the **main.tsp** file, update instructions definition to have additional directives for the agent.
+
+In the `main.tsp` file, update instructions definition to have additional directives for the agent.
 ```typespec
 @instructions("""
   ## Purpose
@@ -189,8 +191,8 @@ You will assist the user in finding car repair records based on the information 
 You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
 
 - Select the agents toolkit's extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />  to open its activity bar from within your project.
-- In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select **manifest.json** when prompted. 
-- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted. 
+- In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select `manifest.json` when prompted.
+- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted.
 - Next, in the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
 - Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
