@@ -5,20 +5,20 @@
 Declarative Agents can be extended to have many capabilities like OneDriveAndSharePoint, WebSearch, CodeInterpreter etc
 Next, you will enhance the agent by adding code interpreter capability to it.
 
-- To do this, open the `main.tsp` file and locate the `RepairServiceAgent` namespace which is where you define the agent behaviour.
+- To do this, open the **main.tsp** file and locate the **RepairServiceAgent** namespace which is where you define the agent behaviour.
 
-- Inside the namespace `RepairServiceAgent`, insert the following snippet above `@service` to define a new capability that enables the agent to interpret and execute code.
+- Inside the namespace **RepairServiceAgent**, insert the following snippet above **@service** to define a new capability that enables the agent to interpret and execute code.
 
 ```typespec
 op codeInterpreter is AgentCapabilities.CodeInterpreter;
 ```
 
 >[!TIP]
-> When you add above codeinterpreter operation, paste it inside the outer `RepairServiceAgent` namespace which defines the agent's behaviour including the capabilities and not the `RepairServiceActions` namespace which defines the agent's actions.
+> When you add above codeinterpreter operation, paste it inside the outer **RepairServiceAgent** namespace which defines the agent's behaviour including the capabilities and not the **RepairServiceActions** namespace which defines the agent's actions.
 
 Since the agent now supports additional capability, update the instructions accordingly to reflect this enhancement.
 
-- In the same `main.tsp` file, update instructions definition to have additional directives for the agent.
+- In the same **main.tsp** file, update instructions definition to have additional directives for the agent.
 
 ```typespec
 @instructions("""
