@@ -84,7 +84,7 @@ op updateRepair is global.RepairsAPI.updateRepair;
 op deleteRepair is global.RepairsAPI.deleteRepair;   
 
 ```
-- Also add a new conversation starter for creating a new repair item just after the first conversation start definintion.
+- Also add a new conversation starter for creating a new repair item just after the first conversation starter definition.
 
 ```typespec
 @conversationStarter(#{
@@ -223,4 +223,4 @@ The agent with the list with each referenced with an adaptive card.
 
 
 
-☑️ You've successfully completed the second exercise which is enhacing your agent with more repair operations! Select **Next >** to go a bonus exercise. 
+☑️ You've successfully completed the second exercise which is enhancing your agent with more repair operations! Select **Next >** to go a bonus exercise.
