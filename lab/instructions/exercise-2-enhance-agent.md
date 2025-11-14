@@ -191,9 +191,7 @@ You will assist the user in finding car repair records based on the information 
 You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
 
 - Select the agents toolkit's extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />  to open its activity bar from within your project.
-- In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select **manifest.json** when prompted.
-- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted.
-- Next, in the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
+- In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
 - Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 
 - Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
 

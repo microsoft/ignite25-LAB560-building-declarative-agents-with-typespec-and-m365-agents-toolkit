@@ -196,7 +196,9 @@ namespace RepairsAPI{
 ```
 
 Next, replace the operation in the template code from "searchIssues" to "listRepairs" to get the list of repairs.
-Replace the entire block of code starting just after the SERVER_URL definition and ending just *before* the final closing braces with the snippet below. Be sure to leave the closing braces intact.
+Replace the entire block of code starting just after the SERVER_URL definition and ending just *before* the final closing braces with the snippet below. Be sure to leave the closing braces intact. 
+
+**Remember to alway copy the code comment section as well here, do not ignore as they form the documentation for this action and is needed at compile time**. 
 
 ```typespec
   /**
@@ -246,9 +248,8 @@ Check this table to understand some of the decorators used in these files
 Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
-- In the activity bar of the toolkit under "Utility" select "Zip App Package" to create package, select **manifest.json** when prompted. 
-- In same "Utility" select "Validate Application" to validate package for any issues before uploading, select **Validate package using Teams Store rules** when prompted. Select the zip file that was created in above step.
-- Next, in the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app into the catalog only for you to test. 
+
+- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
 > [!NOTE]
