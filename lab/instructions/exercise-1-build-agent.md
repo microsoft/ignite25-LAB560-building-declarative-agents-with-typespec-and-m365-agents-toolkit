@@ -140,7 +140,8 @@ In the **main.tsp** file, you will find the basic structure of the agent. Review
 -	Basic instructions 2️⃣
 -	Placeholder code for actions and capabilities (commented out) 3️⃣
 
-![agent template](https://github.com/user-attachments/assets/42da513c-d814-456f-b60f-a4d9201d1620)
+![image of main.tsp file](https://github.com/user-attachments/assets/9924db6f-930b-453c-92ec-72ac7534c1cb)
+
 
 
 Begin by defining your agent for the repair scenario. Replace the **@agent** metadata with below code snippet.
