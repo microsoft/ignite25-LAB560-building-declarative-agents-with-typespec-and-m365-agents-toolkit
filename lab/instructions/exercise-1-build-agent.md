@@ -15,8 +15,6 @@ Once signed into the machine, you will be able to access VS Code from the deskto
 -	Next, select the **Default folder** where you want the agents toolkit to scaffold the agent project.
 -	Next, give an application name like - +++RepairServiceAgent+++ and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
 
-> [!NOTE] 
-> Ignore any alerts in VS Code such as "No TypeSpec compiler found…" prompting you to install the compiler. These can be safely disregarded.
 
 >[!TIP]
 > You may get a prompt window asking if you trust the authors of the files in the folder. This is expected and you can safely select **Yes, I trust the authors**. The dialog is a security safeguard that helps you decide whether to run all features or limit execution based on the trustworthiness of the code authors. If you're opening your own code or from a reliable source, it's safe to trust.
@@ -145,7 +143,7 @@ In the **main.tsp** file, you will find the basic structure of the agent. Review
 ![agent template](https://github.com/user-attachments/assets/42da513c-d814-456f-b60f-a4d9201d1620)
 
 
-Begin by defining your agent for the repair scenario. Replace the **@agent** metadat with below code snippet.
+Begin by defining your agent for the repair scenario. Replace the **@agent** metadata with below code snippet.
 
 ```typespec
 @agent(
