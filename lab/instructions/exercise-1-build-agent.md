@@ -172,7 +172,8 @@ Replace the entire code block in the file with below code:
 ```typespec
 namespace Prompts {
   const INSTRUCTIONS = """
-    You are a declarative agent and were created with Microsoft 365 Agents Toolkit and TypeSpec for Microsoft 365 Copilot.
+   ## Purpose
+   You will assist the user in finding car repair records based on the information provided by the user.
   """;
 }
 
