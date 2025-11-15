@@ -5,7 +5,7 @@ If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
 
-- Go to file **actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the **Repair** item data model.
+- Go to file **actions/actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the **Repair** item data model.
 
 ```typespec
 /**
@@ -26,7 +26,8 @@ If you are in the browser, go back to your project in VS Code.
    * @param repair The repair to update.
    */
   @route("/repairs")  
-  @patch  op updateRepair(@body repair: Repair): Repair;
+  @patch(#{implicitOptionality: true})  op updateRepair(@body repair: Repair): Repair;
+
 
   /**
    * Delete a repair.
@@ -154,9 +155,9 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```typespec
 
-  @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
+@card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
   
-  ```
+```
 The above card response will be sent by the agent when you ask about a repair item or when agent brings a list of items as its reference.
 
 > To keep things simple for this lab, you'll reuse the same card. In practice, you could create separate cards for different operations based on your needs.
@@ -167,29 +168,23 @@ Continue to add card response for the **createRepair** operation to show what th
 
 ```typespec
 
-   @card( #{ dataPath: "$",  title: "$.title",   url: "$.image", file: "adaptiveCards/repair.json"}) 
+@card(#{  dataPath: "$",  file: "adaptiveCards/repair.json",    properties: #{      title: "$.title",      url: "$.image"    }  })
 
 ```
 ## Step 3: Update agent instruction for new operations
 
-In the **main.tsp** file, update instructions definition to have additional directives for the agent.
+In the **prompts/instructions.tsp** file, update instructions definition to have additional directives for the agent.
+Replace the **INSTRUCTIONS** constant with below code:
+
 ```typespec
-@instructions("""
-  ## Purpose
-You will assist the user in finding car repair records based on the information provided by the user. 
-
-  ## Guidelines
-- You are a repair service agent.
-- You can use the actions to create, update, and delete repairs.
-- When creating a repair item, if the user did not provide a description or date , use title as description and put todays date in format YYYY-MM-DD
-- Do not use any technical jargon or complex terms.
-
-""")
+const INSTRUCTIONS ="""  ## PurposeYou will assist the user in finding car repair records based on the information provided by the user. 
+  ## Guidelines- You are a repair service agent.- You can use the actions to create, update, and delete repairs.- When creating a repair item, if the user did not provide a description or date , use title as description and put todays date in format YYYY-MM-DD- Do not use any technical jargon or complex terms.""";
 ```
 ## Step 4:  Provision and Test the Agent
 
 You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
 
+- Update the version of you agent, go to **appPackage/manifest.json** file in the root directory and update version ** **"version": "1.0.0"** to ** **"version": "1.0.1"**
 - Select the agents toolkit's extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />  to open its activity bar from within your project.
 - In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
 - Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 

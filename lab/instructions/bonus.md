@@ -7,7 +7,7 @@ Next, you will enhance the agent by adding code interpreter capability to it.
 
 - To do this, open the **main.tsp** file and locate the **RepairServiceAgent** namespace which is where you define the agent behaviour.
 
-- Inside the namespace **RepairServiceAgent**, insert the following snippet above **@service** to define a new capability that enables the agent to interpret and execute code.
+- Inside the namespace **RepairServiceAgent**, insert the following snippet above **op listRepairs** to define a new capability that enables the agent to interpret and execute code.
 
 ```typespec
 op codeInterpreter is AgentCapabilities.CodeInterpreter;
@@ -41,6 +41,7 @@ You will assist the user in finding car repair records based on the information 
 
 Next, you will test the new analytical capability of your agent. You will need to reprovision the agent. Follow below steps:
 
+- Update the version of your agent. Go to **appPackage/manifest.json** and update from **"version": "1.0.1"** to **"version": "1.0.2"**
 - Save all changes, select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />, to open the activity bar from within your project.
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will reprovision the agent.
 - Open a new chat by selecting the **New chat** button on the top right corner of your agent.
