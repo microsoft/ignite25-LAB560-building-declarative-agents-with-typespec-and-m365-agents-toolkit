@@ -228,7 +228,7 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ```
 
-Now go back to **main.tsp** file and import the repair agent's action we just deined into the agent.
+Now go back to **main.tsp** file and import the repair agent's action we just defined, into the agent.
 
 Replace *import "./actions/github.tsp";* with below statement:
 
