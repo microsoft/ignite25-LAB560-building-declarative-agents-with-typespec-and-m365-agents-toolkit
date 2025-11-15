@@ -122,11 +122,11 @@ Now that you're familiar with the API service, let's move on to integrating it w
 
 ### Project structure
 
-Within your agent project folder, you'll discover the core TypeSpec configuration files: **main.tsp** and **env.tsp**.
+Within your agent project under **src** folder, you'll discover the core TypeSpec configuration files: **main.tsp** and **env.tsp**.
 
 The **main.tsp** file serves as the primary definition point for your agent, containing essential metadata, behavioral instructions, and capability specifications.
 
-The **env.tsp** file enables you to configure environment variables that are processed and generated during compilation.
+The **env.tsp** file is used by the toolkit to process environment variables during compilation. This file automatically reads from **env/.env** and generates environment variables for other TypeSpec files, so manual updates are generally not required.
 
 You'll also find an **actions** folder containing template files - initially including **github.tsp** which demonstrates GitHub API integration. For this lab, you'll replace this template with your own action definitions to establish connectivity with the Repairs API service.
 
@@ -150,7 +150,7 @@ Begin by defining your agent for the repair scenario. Replace the **@agent** met
 ```typespec
 @agent(
   "RepairServiceAgent",
-   "An agent for managing repair information"
+  "An agent for managing repair information"
 )
 
 ```
