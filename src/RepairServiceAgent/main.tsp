@@ -9,7 +9,7 @@ using TypeSpec.M365.Copilot.Actions;
 
 @agent(
   "RepairServiceAgent",
-  "An agent for managing repair information"
+   "An agent for managing repair information"
 )
 
 @instructions("""
