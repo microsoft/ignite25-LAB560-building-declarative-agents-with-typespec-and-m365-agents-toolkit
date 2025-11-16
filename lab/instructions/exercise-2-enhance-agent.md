@@ -5,7 +5,7 @@ If you are in the browser, go back to your project in VS Code.
 
 ## Step 1: Modify agent to add more operations
 
-- Go to file **actions/actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations createRepair, updateRepair and deleteRepair. Here you will also define the **Repair** item data model.
+- Go to file **actions/actions.tsp** and copy paste below snippet just after **listRepairs** operation to add new operations **createRepair**, **updateRepair** and **deleteRepair**. Here you will also define the **Repair** item data model.
 
 ```typespec
 /**
