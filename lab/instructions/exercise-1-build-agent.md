@@ -270,50 +270,9 @@ Check this table to understand some of the decorators used in these files
 | @server           | Defines the server endpoint of the API and its name                                                                                                              |
 | @capabilities      | When used inside a function, it defines simple adaptive cards with small definitions like a confirmation card for the operation                                  |
 
-## Step 5: Test your agent
+☑️ You've successfully completed the first exercise! You've learned how to add an action to the agent to list all repairs. In the next exercise, you'll make it more realistic by adding more operations for managing repairs.
 
-Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. 
-
-Follow below steps:
-
-- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE**. If present, change the variable value from `shared` to `personal`.
-
-- Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
-
-- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
-This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
-
-> [!Note]
-> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
-> ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
-
-> [!NOTE] 
-> Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
-
-- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used before:
-  
-  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
-
-  **TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
-
-- Select the **RepairServiceAgent** from the left side of the screen under **Agents**. 
-
-> If you don't see left navigation to choose agent,  look for below icon and select it to show the navigation.
-> ![find agents nav](https://github.com/user-attachments/assets/0d603d1b-6458-4766-9063-4f87597f10dc)
-
-
-- Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
-
-- To streamline your experience in this lab, select **"Always allow"** when it appears.
-
-  Once accepted you will see the response from the agent as below: 
-
-![ex1-dem0-01](https://github.com/user-attachments/assets/02400c13-0766-4440-999b-93c88ca45dc7)
-
-- Keep this browser session open for upcoming exercise. 
-
-
-☑️ You've successfully completed the first exercise! Select **Next >** to go to the next exercise.
+Select **Next >** to continue to the next exercise.
 
 
 
