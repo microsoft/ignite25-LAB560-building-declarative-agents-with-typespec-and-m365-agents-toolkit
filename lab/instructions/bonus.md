@@ -18,7 +18,7 @@ op codeInterpreter is AgentCapabilities.CodeInterpreter;
 
 Since the agent now supports additional capability, update the instructions accordingly to reflect this enhancement.
 
-- In the same **main.tsp** file, update INSTRUCTIONS constant to have additional directives for the agent. Replace the const with below snippet:
+- In the **prompts/instructions.tsp** file, update INSTRUCTIONS constant to have additional directives for the agent for new capability. Replace the const with below snippet:
 
 ```typespec
 
