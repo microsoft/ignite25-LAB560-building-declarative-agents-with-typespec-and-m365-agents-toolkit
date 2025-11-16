@@ -26,7 +26,8 @@ If you are in the browser, go back to your project in VS Code.
    * @param repair The repair to update.
    */
   @route("/repairs")  
-  @patch(#{implicitOptionality: true})  op updateRepair(@body repair: Repair): Repair;
+  @patch(#{implicitOptionality: true})
+  op updateRepair(@body repair: Repair): Repair;
 
 
   /**
