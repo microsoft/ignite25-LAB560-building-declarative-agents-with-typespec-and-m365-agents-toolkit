@@ -244,7 +244,7 @@ Next, add the action you just defined into the agent. After the conversation sta
 ```typespec
 namespace RepairServiceAgent{  
 
-op listRepairs is global.RepairsAPI.listRepairs;   
+  op listRepairs is global.RepairsAPI.listRepairs;   
 
 }
 
