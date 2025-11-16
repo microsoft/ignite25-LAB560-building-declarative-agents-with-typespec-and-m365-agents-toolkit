@@ -156,7 +156,7 @@ Next, you will enhance the reference cards or response cards using adaptive card
 
 ```typespec
 
-@card(#{  dataPath: "$",  file: "adaptiveCards/repair.json",    properties: #{      title: "$.title",      url: "$.image"    }  })
+@card(#{  dataPath: "$", file: "adaptiveCards/repair.json",    properties: #{ title: "$.title", url: "$.image" } })
   
 ```
 The above card response will be sent by the agent when you ask about a repair item or when agent brings a list of items as its reference.
