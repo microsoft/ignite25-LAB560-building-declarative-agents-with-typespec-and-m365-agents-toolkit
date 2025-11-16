@@ -284,7 +284,7 @@ Follow below steps:
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
 > [!Note]
-> There is a known issue f "Provision" action in Agents Toolkit throwing an issue as below
+> There is a known issue if "Provision" action in Agents Toolkit throwing an issue as below
 When this happens just try Provisioning again.
 
 If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
