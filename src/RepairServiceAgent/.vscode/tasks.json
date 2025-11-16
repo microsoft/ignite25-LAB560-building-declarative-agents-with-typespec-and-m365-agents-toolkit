@@ -4,5 +4,41 @@
 {
     "version": "2.0.0",
     "tasks": [
+        {
+            "label": "Start Agent Locally",
+            "dependsOn": [
+                "Validate prerequisites",
+                "Create resources"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Validate prerequisites",
+            "type": "teamsfx",
+            "command": "debug-check-prerequisites",
+            "args": {
+                "prerequisites": [
+                    "m365Account"
+                ]
+            }
+        },
+        {
+            "label": "Create resources",
+            "type": "teamsfx",
+            "command": "provision",
+            "args": {
+                "env": "local"
+            }
+        }
+        {
+            "label": "Install dependencies",
+            "type": "shell",
+            "command": "npm install",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new"
+            },
+            "runOptions": { "runOn": "folderOpen" }
+        }
     ]
 }
