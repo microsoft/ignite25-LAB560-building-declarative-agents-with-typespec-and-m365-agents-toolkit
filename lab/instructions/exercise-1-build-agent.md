@@ -124,7 +124,7 @@ Within your agent project under **src** folder, you'll discover the core TypeSpe
 
 The **main.tsp** file serves as the primary definition point for your agent, containing essential metadata, behavioral instructions, and capability specifications.
 
-The **env.tsp** file is used by the toolkit to process environment variables during compilation. This file automatically reads from **env/.env** and generates environment variables for other TypeSpec files, so manual updates are generally not required.
+The **env.tsp** file is used by the toolkit to process environment variables during compilation. This file is generated from **env/.env.\*** files and offer variables for other TypeSpec files, so manual updates are not required.
 
 You'll also find an **actions** folder containing template files - initially including **github.tsp** which demonstrates GitHub API integration. For this lab, you'll replace this template with your own action definitions to establish connectivity with the Repairs API service.
 
