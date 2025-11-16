@@ -270,7 +270,7 @@ Check this table to understand some of the decorators used in these files
 | @server           | Defines the server endpoint of the API and its name                                                                                                              |
 | @capabilities      | When used inside a function, it defines simple adaptive cards with small definitions like a confirmation card for the operation                                  |
 
-☑️ You've successfully completed the first exercise! You've learned how to add an action to the agent to list all repairs. In the next exercise, you'll make it more realistic by adding more operations for managing repairs.
+☑️ You've successfully completed the first exercise! You learned how to add an action to list repairs. In the next exercise, you'll add more operations for managing repairs and test and debug them.
 
 Select **Next >** to continue to the next exercise.
 
