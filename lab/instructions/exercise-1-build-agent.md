@@ -284,12 +284,8 @@ Follow below steps:
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
 > [!Note]
-> There is a known issue if "Provision" action in Agents Toolkit throwing an issue as below
-When this happens just try Provisioning again.
-
-If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
-
-![time out error](https://github.com/user-attachments/assets/b5a9f569-bb3b-44e8-a217-502d0fd31ce4)
+> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
+> ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
 
 > [!NOTE] 
 > Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
