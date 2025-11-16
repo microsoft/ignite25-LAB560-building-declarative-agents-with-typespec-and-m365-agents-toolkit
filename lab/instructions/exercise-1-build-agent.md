@@ -276,13 +276,16 @@ Next step is to test the Repair Service Agent. For this first you need to provis
 
 Follow below steps:
 
-- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE=**. If present, change the variable value from `shared` to `personal`.
+- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE**. If present, change the variable value from `shared` to `personal`.
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
 
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
+> [!Note]
+> There is a known issue f "Provision" action in Agents Toolkit throwing an issue as below
+When this happens just try Provisioning again.
 
 If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
 
