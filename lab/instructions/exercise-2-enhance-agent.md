@@ -178,7 +178,8 @@ In the **prompts/instructions.tsp** file, update instructions definition to have
 Replace the **INSTRUCTIONS** constant with below code:
 
 ```typespec
-const INSTRUCTIONS ="""  ## Purpose
+const INSTRUCTIONS ="""  
+    ## Purpose
     You will assist the user in finding car repair records based on the information provided by the user.
    
     ## Guidelines
