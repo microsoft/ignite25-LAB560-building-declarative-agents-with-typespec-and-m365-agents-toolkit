@@ -15,8 +15,6 @@ Once signed into the machine, you will be able to access VS Code from the deskto
 -	Next, select the **Default folder** where you want the agents toolkit to scaffold the agent project.
 -	Next, give an application name like - +++RepairServiceAgent+++ and select Enter to complete the process. You will get a new VSCode window with the agent project preloaded.
 
-> [!NOTE] 
-> Ignore any alerts in VS Code such as "No TypeSpec compiler found…" prompting you to install the compiler. These can be safely disregarded.
 
 >[!TIP]
 > You may get a prompt window asking if you trust the authors of the files in the folder. This is expected and you can safely select **Yes, I trust the authors**. The dialog is a security safeguard that helps you decide whether to run all features or limit execution based on the trustworthiness of the code authors. If you're opening your own code or from a reliable source, it's safe to trust.
@@ -120,34 +118,39 @@ Observe the structure of requests and responses and use the response data to und
 
 Now that you're familiar with the API service, let's move on to integrating it with your agent.
 
-In the project folder, you will find two **TypeSpec** files **main.tsp** and **actions.tsp**.
-The agent is defined with its metadata, instructions and capabilities in the **main.tsp** file.
-You'll use the **actions.tsp** file to define your agent's actions like connecting with the Repairs API service.
+### Project structure
 
-Open **main.tsp** and inspect what is there in the default template, which you will modify for our agent's repair service scenario.
+Within your agent project under **src** folder, you'll discover the core TypeSpec configuration files: **main.tsp** and **env.tsp**.
+
+The **main.tsp** file serves as the primary definition point for your agent, containing essential metadata, behavioral instructions, and capability specifications.
+
+The **env.tsp** file is used by the toolkit to process environment variables during compilation. This file is generated from **env/.env.\*** files and offer variables for other TypeSpec files, so manual updates are not required.
+
+You'll also find an **actions** folder containing template files - initially including **github.tsp** which demonstrates GitHub API integration. For this lab, you'll replace this template with your own action definitions to establish connectivity with the Repairs API service.
+
+Additionally, there's a **prompts** folder housing the **instructions.tsp** file, which allows you to define detailed behavioral instructions and guidance for your agent.
+
 
 ### Update the Agent Metadata and Instructions
+
+Open **main.tsp** and inspect what is there in the default template, which you will modify for our agent's repair service scenario.
 
 In the **main.tsp** file, you will find the basic structure of the agent. Review the content provided by the agents toolkit template which includes:
 -	Agent name and description 1️⃣
 -	Basic instructions 2️⃣
 -	Placeholder code for actions and capabilities (commented out) 3️⃣
 
-![agent template](https://github.com/user-attachments/assets/42da513c-d814-456f-b60f-a4d9201d1620)
+![image of main.tsp file](https://github.com/user-attachments/assets/9924db6f-930b-453c-92ec-72ac7534c1cb)
 
 
-Begin by defining your agent for the repair scenario. Replace the **@agent** and **@instructions** definitions with below code snippet.
+
+Begin by defining your agent for the repair scenario. Replace the **@agent** metadata with below code snippet.
 
 ```typespec
 @agent(
   "RepairServiceAgent",
-   "An agent for managing repair information"
+  "An agent for managing repair information"
 )
-
-@instructions("""
-  ## Purpose
-You will assist the user in finding car repair records based on the information provided by the user. 
-""")
 
 ```
 
@@ -164,9 +167,24 @@ Next, configure a conversation starter, the initial prompt that begins user-agen
 ```
 This starter prompt needs to trigger a GET operation to retrieve all repairs from the service. To enable this behaviour in the agent, you' ll need to define the corresponding action. Proceed to the next step to do so.
 
+Next, go to **prompts/instructions.tsp** and update the instructions.
+Replace the entire code block in the file with below code:
+
+```typespec
+namespace Prompts {
+  const INSTRUCTIONS = """
+    ## Purpose
+    You will assist the user in finding car repair records based on the information provided by the user.
+  """;
+}
+
+```
+
 ### Define the action for the agent
 
-Next, you will define the action for your agent by opening the **actions.tsp** file. You'll return to the **main.tsp** file later to complete the agent metadata with the action reference, but first, the action itself must be defined. For that open the file **actions.tsp**.
+Next, you will define the action for your agent by opening the **actions/github.tsp** file. Rename this file to **actions.tsp**.  You can rename a file in VSCode by right clicking on the file and choosing "Rename". 
+
+You'll return to the **main.tsp** file later to complete the agent metadata with the action reference, but first, the action itself must be defined. For that open the file **actions.tsp**.
 
 The default **actions.tsp** template demonstrates how to define an agent action, including metadata, service URL, and operation structure. Replace the sample GitHub logic entirely with definitions relevant to the Repairs API service.
 
@@ -211,19 +229,28 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ```
 
-Now go back to **main.tsp** file and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
+Now go back to **main.tsp** file and import the repair agent's action we just defined, into the agent.
+
+Replace *import "./actions/github.tsp";* with below statement:
+
+```typespec
+import "./actions/actions.tsp";
+
+```
+
+
+Next, add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
 
 ```typespec
 namespace RepairServiceAgent{  
-  @service
-  @server(global.RepairsAPI.SERVER_URL)
-  @actions(global.RepairsAPI.ACTIONS_METADATA)
-  namespace RepairServiceActions {
-    op listRepairs is global.RepairsAPI.listRepairs;   
-  }
+
+  op listRepairs is global.RepairsAPI.listRepairs;   
+
 }
 
 ```
+
+
 For now, you'll test only the GET operation. Additional operations will be explored in the next exercise.
 
 ## Step 4: (Optional) Understand the decorators
@@ -245,20 +272,20 @@ Check this table to understand some of the decorators used in these files
 
 ## Step 5: Test your agent
 
-Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. Follow below steps:
+Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. 
+
+Follow below steps:
+
+- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE**. If present, change the variable value from `shared` to `personal`.
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
 
 - In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
-> [!NOTE]
-> If for some reason the action "Provision" fails, check your **.env.dev** file to see if you have a variable **AGENT_SCOPE=**. If present, change the variable value from `shared` to `personal`.
-
-
-If you run into a time out issue as shown below, just quit and reopen your VS Code editor and try again.
-
-![time out error](https://github.com/user-attachments/assets/b5a9f569-bb3b-44e8-a217-502d0fd31ce4)
+> [!Note]
+> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
+> ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
 
 > [!NOTE] 
 > Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
