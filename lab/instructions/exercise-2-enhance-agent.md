@@ -169,7 +169,7 @@ Continue to add card response for the **createRepair** operation to show what th
 
 ```typespec
 
-@card(#{  dataPath: "$",  file: "adaptiveCards/repair.json",    properties: #{      title: "$.title",      url: "$.image"    }  })
+@card(#{  dataPath: "$", file: "adaptiveCards/repair.json",    properties: #{ title: "$.title", url: "$.image" } })
 
 ```
 ## Step 3: Update agent instruction for new operations
