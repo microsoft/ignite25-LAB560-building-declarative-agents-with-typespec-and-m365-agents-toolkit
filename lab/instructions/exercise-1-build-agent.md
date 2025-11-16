@@ -250,9 +250,6 @@ namespace RepairServiceAgent{
 
 ```
 
-
-For now, you'll test only the GET operation. Additional operations will be explored in the next exercise.
-
 ## Step 4: (Optional) Understand the decorators
 
 This is an optional step but if curious to know what we have defined in the TypeSpec file just read through this step, or if you wish to test the agent right away go to Step 5.
@@ -270,7 +267,7 @@ Check this table to understand some of the decorators used in these files
 | @server           | Defines the server endpoint of the API and its name                                                                                                              |
 | @capabilities      | When used inside a function, it defines simple adaptive cards with small definitions like a confirmation card for the operation                                  |
 
-☑️ You've successfully completed the first exercise! You learned how to add an action to list repairs. In the next exercise, you'll add more operations for managing repairs and test and debug them.
+☑️ You've successfully completed the first exercise! You learned how to add an action to list repairs which is the GET operation. In the next exercise, you'll add more operations for managing repairs and test and debug them.
 
 Select **Next >** to continue to the next exercise.
 
