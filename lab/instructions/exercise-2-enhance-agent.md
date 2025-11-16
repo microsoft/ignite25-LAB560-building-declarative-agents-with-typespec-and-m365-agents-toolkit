@@ -191,13 +191,76 @@ const INSTRUCTIONS ="""
 ```
 ## Step 4:  Provision and Test the Agent
 
-You can now test the enhanced agent, which can now support additional operations. You'll need to reprovision the agent and refresh the browser. Follow below steps to proceed: 
+### Provision
 
-- Update the version of you agent, go to **appPackage/manifest.json** file in the root directory and update version ** **"version": "1.0.0"** to ** **"version": "1.0.1"**
-- Select the agents toolkit's extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />  to open its activity bar from within your project.
-- In the activity bar of the toolkit under "LifeCycle" select "Provision" to package and upload the newly updated agent for testing. 
-- Next, go back to the open Microsoft Edge browser tab and do a refresh or simply go to  +++https://m365.cloud.microsoft/chat+++ . 
-- Select the **RepairServiceAgent** from the left side of the screen under **Agents**.
+Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. 
+
+Follow below steps:
+
+- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE**. If present, change the variable value from `shared` to `personal`.
+
+- Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
+
+- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
+This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
+
+> [!Note]
+> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
+> ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
+
+> [!NOTE] 
+> Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
+
+- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used before:
+  
+  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
+
+  **TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
+
+- Select the **RepairServiceAgent** from the left side of the screen under **Agents**. 
+
+> If you don't see left navigation to choose agent,  look for below icon and select it to show the navigation.
+> ![find agents nav](https://github.com/user-attachments/assets/0d603d1b-6458-4766-9063-4f87597f10dc)
+
+### Test list operation
+
+- Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
+
+- To streamline your experience in this lab, select **"Always allow"** when it appears.
+
+  Once accepted you will see the response from the agent as below: 
+
+![ex1-dem0-01](https://github.com/user-attachments/assets/02400c13-0766-4440-999b-93c88ca45dc7)
+
+### Diagnosing and Debugging Agent
+
+You can enable developer mode in a chat to allow you as a developer to understand how well the agent understands the tasks, ensure it calls your services appropriately, identify areas that need fine-tuning, detect performance issues, and generally help you track and analyse its interactions.
+
+- Copy and paste the following line into the chat with your agent to enable debugging mode.
+
+```
+-developer on
+```
+
+
+The agent will respond with a success message if everything went well **Successfully enabled developer mode**.
+
+- Next to test, send a prompt to interact with the agent like the one below.
+
+`Find out what Karin is working on`.
+
+- You will get a response with information from the repair service but also get the **Agent debug info** card along with the response.
+- Expand the Agent debug info card to view all the details. You will be able to see:
+  - Agent information 1️⃣
+  - Capabilities of the agent 2️⃣
+  - Actions and what function were selected 3️⃣
+  - Executed action info with detailed information about the request, latency, response data, etc. 4️⃣
+
+- Try expanding the Executed Actions and you will see the request url, parameters passed, request header, response, latency, etc.
+
+### Test create operation
+
+Now let's try to invoke a POST call to create a repair item.
 
 - Start by using the conversation starter 'Create repair'. Replace parts of the prompt to add a title, then send it to the chat to initiate the interaction. For e.g.
 
@@ -225,4 +288,4 @@ The agent with the list with each referenced with an adaptive card.
 
 
 
-☑️ You've successfully completed the second exercise which is enhancing your agent with more repair operations! Select **Next >** to go a bonus exercise.
+☑️ You've successfully completed the second exercise! You've enhanced your agent with additional repair operations and learned how to test and debug it. Select **Next >** to continue to the bonus exercise.
