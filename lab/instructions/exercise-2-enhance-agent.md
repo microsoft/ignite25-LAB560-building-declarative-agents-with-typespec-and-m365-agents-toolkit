@@ -201,15 +201,18 @@ Follow below steps:
 
 - Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
 
-- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
+- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test.
+  
+> [!NOTE] 
+> Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
+
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
 > [!Note]
-> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
+> There are couple of known issues where the **Provision** action in Agents Toolkit may fail with the errors shown below. If this happens, simply retry the provisioning process.
 > ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
+> ![provision timeout issue](https://github.com/user-attachments/assets/fd13651e-d469-4ecb-91b2-c24045fb4264)
 
-> [!NOTE] 
-> Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
 
 - Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used before:
   
@@ -255,6 +258,9 @@ The agent will respond with a success message if everything went well **Successf
   - Capabilities of the agent 2️⃣
   - Actions and what function were selected 3️⃣
   - Executed action info with detailed information about the request, latency, response data, etc. 4️⃣
+
+  ![image of agent debug info](https://github.com/user-attachments/assets/cb8623c7-27e1-4ece-9ec6-4c43b76917fb)
+
 
 - Try expanding the Executed Actions and you will see the request url, parameters passed, request header, response, latency, etc.
 
