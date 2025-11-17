@@ -239,14 +239,10 @@ This will take a while and you will be able to see a toaster message in VS Code,
 
 You can enable developer mode in a chat to allow you as a developer to understand how well the agent understands the tasks, ensure it calls your services appropriately, identify areas that need fine-tuning, detect performance issues, and generally help you track and analyse its interactions.
 
-- Copy and paste the following line into the chat with your agent to enable debugging mode.
-
-```
--developer on
-```
-
+- Send `-developer on` to the chat to enable debugging mode.
 
 The agent will respond with a success message if everything went well **Successfully enabled developer mode**.
+- Refresh the browser by pressing F5 to activate the agent debug info.
 
 - Next to test, send a prompt to interact with the agent like the one below.
 
