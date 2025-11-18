@@ -229,7 +229,13 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ```
 
-Now go back to **main.tsp** and add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
+Now go back to **main.tsp** file and verify the import statement for actions. If it still references *./actions/github.tsp*, replace *import "./actions/github.tsp";* with the statement below:
+
+```typespec
+import "./actions/actions.tsp";
+```
+
+Next, in the same file, add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
 
 ```typespec
 namespace RepairServiceAgent{  
