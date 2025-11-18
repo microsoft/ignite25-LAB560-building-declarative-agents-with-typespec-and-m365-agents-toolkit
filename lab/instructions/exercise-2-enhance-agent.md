@@ -1,4 +1,4 @@
-# Exercise 2:  Enhance Agent capabilities
+# Exercise 2: Add more operations, test the agent, and learn debugging techniques
 
 Next, you will enhance the agent by adding more operations in the Repairs API service and enabling responses with Adaptive Cards. Let's explore each of these enhancements step by step.
 If you are in the browser, go back to your project in VS Code.
@@ -208,8 +208,8 @@ Follow below steps:
 
 This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
 
-> [!Note]
-> There are couple of known issues where the **Provision** action in Agents Toolkit may fail with the errors shown below. If this happens, simply retry the provisioning process.
+> [!ALERT]
+> There are couple of known issues where the **Provision** action in Agents Toolkit may fail with the errors shown below. If this happens, simply retry the provisioning process until it succeeds.
 > ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
 > ![provision timeout issue](https://github.com/user-attachments/assets/fd13651e-d469-4ecb-91b2-c24045fb4264)
 
