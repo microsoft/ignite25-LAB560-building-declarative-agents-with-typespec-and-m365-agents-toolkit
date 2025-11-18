@@ -242,7 +242,9 @@ You can enable developer mode in a chat to allow you as a developer to understan
 - Send `-developer on` to the chat to enable debugging mode.
 
 The agent will respond with a success message if everything went well **Successfully enabled developer mode**.
-- Refresh the browser by pressing F5 to activate the agent debug info.
+
+> [!TIP] 
+> Refresh the browser by pressing F5 to activate the agent debug info.
 
 - Next to test, send a prompt to interact with the agent like the one below.
 
