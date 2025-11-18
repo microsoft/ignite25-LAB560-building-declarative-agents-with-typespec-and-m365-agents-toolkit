@@ -64,6 +64,7 @@ You should get some response similar to below screen. It may vary sometimes.
 
 > [!ALERT]
 > Known issue with code interpreter: If you see an error message in the response as below, don't worry—the chart will still be generated and displayed correctly. You can safely ignore the error.
+> ![error with CI](https://github.com/user-attachments/assets/d9d04b7f-5696-42ca-8767-178dbc51f342)
 
 
 ☑️ Great job completing all the exercises! Click **Next >** to finish up this lab.
