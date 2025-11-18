@@ -1,4 +1,4 @@
-# Bonus step - Enhance your agent's capability
+# Bonus Exercise: Add code interpreter capability to the agent
 
 ## Step 1: Add code interpreter capability to your agent
 
