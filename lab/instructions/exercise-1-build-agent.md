@@ -1,4 +1,4 @@
-# Exercise 1: Build your first agent with TypeSpec using Microsoft 365 Agents Toolkit
+# Exercise 1: Build your first Declarative Agent with one action that performs a single operation
 
 It’s time to build your first Declarative Agent using Microsoft 365 Agents Toolkit. 
 You will create an agent called **RepairServiceAgent**, which interacts with repairs data via an existing Repairs API service to help users manage car repair records.
@@ -229,17 +229,13 @@ Replace the entire block of code starting just after the SERVER_URL definition a
 
 ```
 
-Now go back to **main.tsp** file and import the repair agent's action we just defined, into the agent.
-
-Replace *import "./actions/github.tsp";* with below statement:
+Now go back to **main.tsp** file and verify the import statement for actions. If it still references *./actions/github.tsp*, replace *import "./actions/github.tsp";* with the statement below:
 
 ```typespec
 import "./actions/actions.tsp";
-
 ```
 
-
-Next, add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
+Next, in the same file, add the action you just defined into the agent. After the conversation starters replace the entire "RepairServiceAgent" namespace with below snippet:
 
 ```typespec
 namespace RepairServiceAgent{  
@@ -249,9 +245,6 @@ namespace RepairServiceAgent{
 }
 
 ```
-
-
-For now, you'll test only the GET operation. Additional operations will be explored in the next exercise.
 
 ## Step 4: (Optional) Understand the decorators
 
@@ -270,50 +263,9 @@ Check this table to understand some of the decorators used in these files
 | @server           | Defines the server endpoint of the API and its name                                                                                                              |
 | @capabilities      | When used inside a function, it defines simple adaptive cards with small definitions like a confirmation card for the operation                                  |
 
-## Step 5: Test your agent
+☑️ You've successfully completed the first exercise! You learned how to add an action to list repairs which is the GET operation. In the next exercise, you'll add more operations for managing repairs and test and debug them.
 
-Next step is to test the Repair Service Agent. For this first you need to provision the agent to your tenant. 
-
-Follow below steps:
-
-- Open your **.env.dev** file  in folder **env** in the root of the project to see if you have a variable **AGENT_SCOPE**. If present, change the variable value from `shared` to `personal`.
-
-- Select the Agents toolkit extension icon <img width="24" alt="m365atk-icon" src="https://github.com/user-attachments/assets/b5a5a093-2344-4276-b7e7-82553ee73199" />. This will open the activity bar for agents toolkit from within your project.
-
-- In the activity bar of the agents toolkit under "LifeCycle" select "Provision". This will build the app package consisting of the generated manifest files and icons and side load the app package into the catalog only for you to test. 
-This will take a while and you will be able to see a toaster message in VS Code, showing the progress of the task to provision.
-
-> [!Note]
-> There's a known issue where the **Provision** action in Agents Toolkit may fail with the error shown below. If this happens, simply retry the provisioning process.
-> ![provision 429 issue](https://github.com/user-attachments/assets/bf849c94-6f5a-406a-9902-ae5a07d47840)
-
-> [!NOTE] 
-> Here the agents toolkit also helps validate all the definitions provided in the TypeSpec file to ensure accuracy. It also identifies errors to streamline the developer experience.
-
-- Next, open Microsoft Edge from lab machine from the taskbar and go to +++https://m365.cloud.microsoft/chat+++ in the browser to open Copilot app. Use the same credentils you used before:
-  
-  **Username: +++@lab.CloudPortalCredential(User1).Username+++**
-
-  **TAP Token:+++@lab.CloudPortalCredential(User1).AccessToken+++**
-
-- Select the **RepairServiceAgent** from the left side of the screen under **Agents**. 
-
-> If you don't see left navigation to choose agent,  look for below icon and select it to show the navigation.
-> ![find agents nav](https://github.com/user-attachments/assets/0d603d1b-6458-4766-9063-4f87597f10dc)
-
-
-- Select the conversation starter - **List repairs** and send the prompt to the chat to initiate conversation with your agent and check out the response. When prompted to connect the agent to process a query, you’ll usually get a message with buttons to Allow accessing your service through agent. 
-
-- To streamline your experience in this lab, select **"Always allow"** when it appears.
-
-  Once accepted you will see the response from the agent as below: 
-
-![ex1-dem0-01](https://github.com/user-attachments/assets/02400c13-0766-4440-999b-93c88ca45dc7)
-
-- Keep this browser session open for upcoming exercise. 
-
-
-☑️ You've successfully completed the first exercise! Select **Next >** to go to the next exercise.
+Select **Next >** to continue to the next exercise.
 
 
 
