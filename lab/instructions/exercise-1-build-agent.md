@@ -1,4 +1,4 @@
-# Exercise 1: Build your first Declarative Agent with actions and one operation
+# Exercise 1: Build your first Declarative Agent with one action that performs a single operation
 
 It’s time to build your first Declarative Agent using Microsoft 365 Agents Toolkit. 
 You will create an agent called **RepairServiceAgent**, which interacts with repairs data via an existing Repairs API service to help users manage car repair records.
