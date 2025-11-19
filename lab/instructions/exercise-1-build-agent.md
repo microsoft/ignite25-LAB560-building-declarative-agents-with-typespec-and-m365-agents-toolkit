@@ -74,7 +74,7 @@ Content-Type: application/json
 }
 
 ### Update an existing repair request
-PATCH {{base_url}}/repairs
+PATCH {{base_url}}/repairs/1
 Content-Type: application/json  
 
 {
