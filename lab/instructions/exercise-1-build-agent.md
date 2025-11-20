@@ -248,7 +248,7 @@ namespace RepairServiceAgent{
 
 ## Step 4: (Optional) Understand the decorators
 
-This is an optional step but if curious to know what we have defined in the TypeSpec file just read through this step, or if you wish to test the agent right away go to Step 5.
+This is an optional step but if curious to know what we have defined in the TypeSpec file just read through this step.
 In the TypeSpec files **main.tsp** and **actions.tsp**, you'll find decorators (starting with @), namespaces, models, and other definitions for your agent.
 
 Check this table to understand some of the decorators used in these files 
